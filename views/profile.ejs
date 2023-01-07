@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Css Files  -->
+    <link rel="stylesheet" href="../profile.css">
+    <link rel="stylesheet" href="../animation.css">
+
+    <!-- Logo for the website -->
+    <link rel="icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon-precomposed" href="../image/logo.ico">
+    <link rel="shortcut icon" href="../image/logo.ico">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/fa3c9a78d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font Links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Cinzel+Decorative:wght@400;700&family=Markazi+Text&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Markazi+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Your Profile</title>
+</head>
+<body>
+    <header>
+        <div class="contener">
+            <div class="logo">
+                <a href="/Home"><img src="../image/Logo.png" alt="logo"></a>
+                <h1 class="title-h1">Space Youth Forum</h1>
+            </div>
+            <div class="navegation">
+                <nav>
+                    <div class="i" id="listLogo" onclick="block()">
+                        <span class="i1"></span>
+                        <span class="i2"></span>
+                        <span class="i3"></span>
+                    </div>
+                    <ul id="listUl" >
+                        <li><a href="/Home">الرئسية</a></li>
+                        <li><a href="/challenges">التحديات</a></li>
+                        <li><a href="/Events">الأحداث</a></li>
+                        <li><a href="/Topics">المواضيع</a></li>
+                        <li><a href="/Top">المتصدرين</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="conterUserInfo">
+        <div class="profileTitle">
+            <h1>الملف الشخصي الخاص بك</h1>
+        </div>
+        <div class="userInfo">
+            <div class="userTitle">
+
+                <% if (UserData.gender === 'male') { %>
+                    <img src="../image/men.png" data-genral="man">
+                    <h2 id="Welcoming" data-gender="<%= UserData.gender %>" data-userName="<%= UserData.userName %>" data-Ustatus="<%= UserData.Ustatus %>" data-points="<%= UserData.points %>" data-pass="<%= UserData.pass %>" data-email="<%= UserData.email %>" data-eventCame="<%= UserData.eventCame %>" data-articalReaded="<%= UserData.articalReaded %>" data-challengePassed="<%= UserData.challengePassed %>" data-UserDataID="<%= UserData.id %>" data-UserName="<%= UserData.userName %>">مرحباً برائد الفضاء <%= UserData.userName %> </h2>                    
+                <% } else if (UserData.gender === 'female') { %>
+                    <img src="../image/women.png" data-genral="woman">
+                    <h2 id="Welcoming" data-gender="<%= UserData.gender %>" data-userName="<%= UserData.userName %>" data-Ustatus="<%= UserData.Ustatus %>" data-points="<%= UserData.points %>" data-pass="<%= UserData.pass %>" data-email="<%= UserData.email %>" data-eventCame="<%= UserData.eventCame %>" data-articalReaded="<%= UserData.articalReaded %>" data-challengePassed="<%= UserData.challengePassed %>" data-UserDataID="<%= UserData.id %>" data-UserName="<%= UserData.userName %>">مرحباً برائدة الفضاء <%= UserData.userName %> </h2>                    
+                <% } %> 
+                
+                <p>نقاطك : <%= UserData.points.toString() %> </p>
+                <a href="/challenges">الذهاب الى التحديات</a>
+            </div>
+            <div class="userInformation">
+                <ul>
+                    <li>المقالات التى قمت بقراءتها : 
+                        <% UserData.articalReaded.forEach(artical => { %>
+                            <p><%= artical %> </p>
+                        <% }) %>
+                    </li>
+                    
+                    <li>التحديات التى قمت بأجتيازها : 
+                        <% UserData.challengePassed.forEach(challenge => { %>
+                            <p><%= challenge %> </p>
+                        <% }) %>
+                    </li>
+
+                    <li>التجمعات التى حضرتها : 
+                        <% UserData.eventCame.forEach(event => { %>
+                            <p> <%= event %> </p>
+                        <% }) %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="account-Edit">
+            <a href="/Home" id="logout">تسجيل الخروج من الحساب</a>
+            <fieldset>
+                <legend>تحذير</legend>
+                <p>سيتم حذف الحساب نهائيا و جميع نقاطتك و لن تتمكن من تسجيل الدخول به مجدداً</p>
+                <a href="/Home" data-linked="<%= UserData.id %> " id="delete"> حذف الحساب </a>
+            </fieldset>
+        </div>
+    </div>
+
+
+    <section class="copyright">
+        <div class="end-text">
+            <p> &copy; Copyright 2022 SYF</p>
+        </div>
+    </section>
+
+
+    <!-- Loading page  -->
+    <div id="loadingPage">
+        <div class="space">
+            <div class="f-circle"></div>
+            <div class="s-circle"></div>
+            <div class="t-circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script>
+        
+
+
+        let welcomeEle = document.getElementById('Welcoming')
+        let UserObj = welcomeEle.getAttribute('data-UserDataID')
+        let DchallengePassed = welcomeEle.getAttribute('data-challengePassed')
+        let DarticalReaded = welcomeEle.getAttribute('data-articalReaded')
+        let DeventCame = welcomeEle.getAttribute('data-eventCame')
+        let DuserName = welcomeEle.getAttribute('data-userName')
+        let Demail = welcomeEle.getAttribute('data-email')
+        let Dpass  = welcomeEle.getAttribute('data-pass')
+        let Dpoints  = welcomeEle.getAttribute('data-points')
+        let DUstatus  = welcomeEle.getAttribute('data-Ustatus')
+        let Dgender  = welcomeEle.getAttribute('data-gender')
+
+        let userData = JSON.parse(localStorage.getItem('UserData'))
+
+        userData.id = UserObj
+        userData.challengePassed = DchallengePassed
+        userData.articalReaded = DarticalReaded
+        userData.eventCame = DeventCame
+        userData.userName = DuserName
+        userData.email = Demail
+        userData.pass = Dpass
+        userData.points = +Dpoints
+        userData.Ustatus = DUstatus
+        userData.gender = Dgender
+
+        localStorage.setItem('UserData' , JSON.stringify(userData))
+        console.log(userData)
+
+        // ++++++++++++++++++   Logout   +++++++++++++++++++
+
+        document.getElementById('logout').addEventListener('click' , () => {
+            localStorage.clear()
+        })
+
+        // ++++++++++++++++++   Delete   +++++++++++++++++++
+        document.getElementById('delete').addEventListener('click' , () => {
+            fetch(`/profile/${UserObj}` , {method : 'DELETE'}).then((Response , data) => {
+                Response.JSON
+                console.log(data)
+            }).catch((err) => console.log(err))
+            localStorage.clear()
+        })
+
+        // +++++++++++++++++ For list Nav +++++++++++++++++
+
+        function block() {
+            let click = document.getElementById('listLogo')
+            click.onclick = function () {
+                document.getElementById('listUl').classList.toggle('show');
+                document.querySelectorAll('nav span').forEach(span => span.classList.toggle('span'))
+            }
+            document.getElementById('listUl').onclick = function () {
+                document.getElementById('listUl').classList.toggle('show')
+                document.querySelectorAll('nav span').forEach(span => span.classList.toggle('span'))
+            }
+        }
+
+        // ++++++++++++++++++++ Loading Page ++++++++++++++++++++++++
+        window.onload = () => {
+            let LoadingPage = document.querySelector('#loadingPage')
+
+            LoadingPage.style.opacity = '1'
+            LoadingPage.style.display = 'flex' 
+            document.body.style.overflow = 'hidden'
+
+            setTimeout(() => {
+                document.body.style.overflow = 'auto'
+                LoadingPage.style.opacity = '0'        
+            }, 3000);
+
+            setTimeout(() => {
+                LoadingPage.style.display = 'none'
+            }, 4000);
+
+        }
+
+    </script>
+
+</body>
+</html>

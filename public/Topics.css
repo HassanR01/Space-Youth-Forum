@@ -1,0 +1,1706 @@
+:root {
+    --white : #ffffff ;
+    --black : #000000 ;
+    --gray : #596164 ;
+    --main-color-1 : #00beff;
+    --main-color-2 : #26b0ff;
+    --main-color-3 : #000080 ;
+    --main-color-4 : #0084ff ;
+    --main-color-5 : #f7f7fb ;
+    --main-color-6 : #B2FFFF ;
+    --main-font-1 : 'Cairo', sans-serif;
+    --main-font-2 :  'Cinzel Decorative', cursive;
+    --main-font-3 :  'Quintessential', cursive;
+    --main-font-4 :  'Markazi Text', serif;
+    --main-transition : 0.5s ease ;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font-1);
+    background: linear-gradient(180deg, var(--main-color-2) 6%, #1381ff);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Start Scroll bar */
+
+::-webkit-scrollbar {
+    width: 5px;
+    /* display: none; */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--black);
+    box-shadow: 0 0 5px var(--white) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-4);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner{
+    background-color: #000000;
+
+}
+
+ul::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+}
+
+ul::-webkit-scrollbar-track {
+    background-color: var(--black);
+    box-shadow: 0 0 5px var(--white) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-2);
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-2);
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-corner{
+    background-color: #000000;
+
+}
+
+
+/* End Scroll bar */
+
+/* Start header  */
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+}
+
+.contener {
+    position: relative;
+    width: 100%;
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color-2) !important;
+    min-height: 73.91px;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px black;
+}
+
+.contener .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70px;
+    margin: 0 10px;
+}
+
+.logo h1 {
+    max-width: 120px;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-family: var(--main-font-3);
+}
+
+.contener .navegation {
+    padding: 0 5px ;
+}
+
+.navegation nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegation nav i {
+    position: relative;
+    font-size: 30px;
+    color: var(--white);
+}
+/* 
+.navegation nav i:hover {
+    animation: up-down 2s infinite ;
+} */
+
+@media (min-width : 768px) {
+    .navegation nav i {
+        display: none;
+    }
+}
+
+.navegation nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+}
+
+.navegation nav ul li {
+    position: relative ;
+    padding: 25px 0;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+
+.navegation nav ul li::before {
+    content : "" ;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 100%;
+    background-color: var(--main-color-3);
+    transition: var(--main-transition) ;
+}
+
+.navegation nav ul li:hover::before {
+    left: 0;
+    box-shadow: 0 0 20px black;
+}
+
+.navegation nav ul li a {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    font-family: var(--main-font-1);
+    color: var(--main-color-3);
+    transition: var(--main-transition);
+}
+
+.navegation nav ul li:hover .btn{
+    color: var(--white);
+}
+
+.show {
+    right: -10px !important;
+}
+
+@media (max-width : 767px) {
+    .navegation nav ul {
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        top: 52px ;
+        right: -300px;
+        background-color: #000742b0;
+        transform: var(--main-transition);
+        box-shadow: 0 20px 80px black;
+    }
+
+    .navegation nav ul li a {
+        color: var(--main-color-6);
+    }
+
+    .contener .logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        margin: 5px 0 10px 0;
+    }
+    .logo img {
+        width: 50px;
+    }
+    .logo h1 {
+        font-size: 2rem;
+        max-width: 700px;
+    }
+}
+
+@media (max-width : 400px) {
+    .logo img {
+        width: 50px;
+    }
+    .logo h1 {
+        font-size: 1.2rem;
+        max-width: 700px;
+    }
+}
+
+@keyframes up-down {
+    100%,
+    0% {
+        margin: 0 0;
+    }
+
+    50% {
+        margin: 20px 0;
+    }
+}
+/* End header */
+
+/* Start SSplanets */
+
+.SSplanets {
+    width: 100%;
+    background-color:var(--main-color-1);
+    background-image: url(/image/cover-solar-system.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.SSplanets .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #0005307e;
+    padding: 100px 10px 0px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: rtl;
+}
+
+.SSplanets .overlay h3 {
+    font-size: 2.5rem;
+    margin: 20px  auto 50px;
+    font-family: var(--main-font-4);
+    color: var(--main-color-5);
+}
+
+.SSplanets .overlay ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    max-width: 600px;
+    overflow: auto;
+}
+
+.SSplanets .overlay ul li {
+    position: relative;
+    font-size: 1.3rem ;
+    color: var(--main-color-6);
+    margin: 10px;
+    font-family: var(--main-font-1);
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+
+.SSplanets .overlay ul li::after {
+    content : "" ;
+    position :absolute;
+    width : 100% ;
+    height: 2px;
+    background-color: #B2FFFF;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    opacity: 0.2;
+    transition: var(--main-transition);
+}
+
+.SSplanets .overlay ul li:hover::after {
+    opacity: 1;
+    box-shadow:  0 0 5px #B2FFFF;
+}
+
+.SSplanets .overlay .box-content {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 20px;
+}
+
+.SSplanets .overlay .box-content .active {
+    display: flex !important;
+}
+
+.SSplanets .overlay .box-content .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.SSplanets .overlay .box-content .content .image{
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.SSplanets .overlay .box-content .content .image h4 {
+    font-size: 2.5rem ;
+    color: var(--main-color-5);
+    font-family: var(--main-font-4);
+    position: absolute;
+    top: 0;
+}
+
+.SSplanets .overlay .box-content .content .image img{
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0 ,-50%);
+    width: 250px;
+    transition: var(--main-transition);
+    animation: bigSmall 3s infinite;
+}
+
+.SSplanets .overlay .box-content .content .topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55%;
+    margin: auto;
+    height: 90% ;
+}
+
+.SSplanets .overlay .box-content .content .topic h4{
+    font-size: 3rem;
+    font-family: var(--main-font-1);
+    color: var(--main-color-1);
+    margin: 20px 0;
+}
+
+.SSplanets .overlay .box-content .content .topic p{
+    color: var(--main-color-5);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: var(--main-font-4);
+}
+
+.SSplanets .overlay .box-content .content .topic .analysis{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+}
+
+.SSplanets .overlay .box-content .content .topic .analysis .visitors{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.SSplanets .overlay .box-content .content .topic .analysis .distance {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SSplanets .overlay .box-content .content .topic .analysis h6 {
+    color: var(--main-color-6);
+    font-family: var(--main-font-1);
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.SSplanets .overlay .box-content .content .topic .analysis p {
+    color: var(--main-color-1);
+    font-family: var(--main-font-4);
+    margin: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.SSplanets .overlay .box-content .content .topic .analysis span {
+    color: #596164;
+    font-size: 1.2rem;
+    font-family: var(--main-font-3);
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .SSplanets .overlay h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .SSplanets .overlay ul {
+        max-width: 370px;
+        overflow-x: scroll;
+        justify-content: right;
+    }
+
+    .SSplanets .overlay .box-content {
+        height: 1000px;
+    }
+
+    .SSplanets .overlay .box-content .content {
+        flex-direction: column;
+    }
+
+    .SSplanets .overlay .box-content .content .image {
+        width: 100%;
+        height: 20%;
+    }
+
+    .SSplanets .overlay .box-content .content .image h4 {
+        font-size: 1.8rem;
+    }
+
+    .SSplanets .overlay .box-content .content .image img {
+        animation: rotating 5s infinite;
+        top: 40%;
+    }
+
+    .SSplanets .overlay .box-content .content .topic {
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .SSplanets .overlay .box-content .content .topic h4 {
+        font-size: 2.5rem;
+    }
+
+    .SSplanets .overlay .box-content .content .topic p {
+        font-size: 1.2rem;
+    }
+
+    .SSplanets .overlay .box-content .content .topic .analysis {
+        justify-content: space-between;
+    }   
+
+    .SSplanets .overlay .box-content .content .topic .analysis h6 {
+        font-size: 1rem;
+    }
+
+    .SSplanets .overlay .box-content .content .topic .analysis p{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .SSplanets .overlay h3 {
+        font-size: 1.9rem
+    }
+
+    .SSplanets .overlay ul {
+        max-width: 220px;
+        overflow-x: scroll;
+        justify-content: right;
+    }
+
+    .SSplanets .overlay .box-content {
+        height: 1000px;
+    }
+
+    .SSplanets .overlay .box-content .content {
+        flex-direction: column;
+    }
+
+    .SSplanets .overlay .box-content .content .image {
+        width: 100%;
+        height: 20%;
+        margin-bottom: 100px;
+    }
+
+    .SSplanets .overlay .box-content .content .image h4 {
+        font-size: 1.4rem;
+    }
+
+    .SSplanets .overlay .box-content .content .image img {
+        animation: rotating 5s infinite;
+        top: 50%;
+        width: 200px;
+    }
+
+    .SSplanets .overlay .box-content .content .topic {
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .SSplanets .overlay .box-content .content .topic h4 {
+        font-size: 1.6rem;
+    }
+
+    .SSplanets .overlay .box-content .content .topic p {
+        font-size: 1.2rem;
+    }
+
+    .SSplanets .overlay .box-content .content .topic .analysis {
+        justify-content: space-between;
+    }   
+
+    .SSplanets .overlay .box-content .content .topic .analysis h6 {
+        font-size: 1rem;
+    }
+
+    .SSplanets .overlay .box-content .content .topic .analysis p{
+        font-size: 1.2rem;
+    }
+    
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes bigSmall {
+    0% {
+        width: 70%;
+    }
+    50% {
+        width: 85%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+/* End SSplanets */
+
+/* Start SScrew */
+
+.SScrew {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    direction: rtl;
+    background-color: var(--main-color-2);
+    background-image: url(../Image/crew-Cover.png);
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+}
+
+.SScrew .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #0005307e;
+    padding: 100px 10px 0px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.SScrew .overlay h3 {
+    font-size: 2.5rem;
+    margin: 20px  auto 50px;
+    font-family: var(--main-font-4);
+    color: var(--main-color-5);
+}
+
+.SScrew .overlay ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    max-width: 600px;
+    
+}
+
+.SScrew .overlay ul li {
+    position: relative;
+    font-size: 1.3rem ;
+    color: var(--main-color-6);
+    margin: 10px;
+    font-family: var(--main-font-3);
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+
+.SScrew .overlay ul li::after {
+    content : "" ;
+    position :absolute;
+    width : 100% ;
+    height: 2px;
+    background-color: #B2FFFF;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    opacity: 0.2;
+    transition: var(--main-transition);
+}
+
+.SScrew .overlay ul li:hover::after {
+    opacity: 1;
+    box-shadow:  0 0 5px #B2FFFF;
+}
+
+.SScrew .overlay .box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.SScrew .overlay .box-content .active {
+    display: flex !important;
+}
+
+
+.SScrew .overlay .box-content .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.SScrew .overlay .image {
+    position: relative;
+    width: 70%;
+    height: auto;
+    background-color: var(--main-color-1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 5px black;
+}
+
+.SScrew .overlay .image img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 2px solid var(--main-color-1);
+}
+
+.SScrew .overlay .image h4 {
+    font-size: 2rem;
+    font-family: var(--main-font-3);
+    margin: 15px;
+}
+
+.SScrew .overlay .topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.SScrew .overlay .topic h4 {
+    font-size:  2.5rem;
+    font-family: var(--main-font-1);
+    color: var(--main-color-6);
+    margin: 0 0 20px;
+}
+
+.SScrew .overlay .topic p {
+    font-size: 1.8rem;
+    color: var(--main-color-5);
+    text-align: center;
+    font-family: var(--main-font-4);
+    max-width: 1000px;
+    border-radius: 10px;
+    background-color: #00000098;
+    line-height: 1.9;
+    padding: 15px;
+}
+
+.SScrew .overlay .topic p span {
+    font-size: 2.5rem;
+    color: var(--main-color-1);
+    font-weight: bold;
+    display: block;
+}
+
+
+@media (max-width: 767px) {
+    .SScrew .overlay h3 {
+        font-size: 2.2rem
+    }
+
+    .SScrew .overlay ul {
+        max-width: 220px;
+        overflow-x: scroll;
+        justify-content: right;
+    }
+
+    .SScrew .overlay .box-content .content {
+        flex-direction: column;
+    }
+
+    .SScrew .overlay .box-content .content .image h4 {
+        font-size: 1.4rem;
+    }
+
+    .SScrew .overlay .box-content .content .topic {
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .SScrew .overlay .box-content .content .topic h4 {
+        font-size: 2.3rem;
+    }
+
+    .SScrew .overlay .box-content .content .topic p {
+        font-size: 1.2rem;
+    }
+
+    .SScrew .overlay .box-content .content .topic p span {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .SScrew .overlay h3 {
+        font-size: 1.9rem
+    }
+
+    .SScrew .overlay ul {
+        max-width: 220px;
+        overflow-x: scroll;
+        justify-content: right;
+    }
+
+
+    .SScrew .overlay .box-content .content {
+        flex-direction: column;
+    }
+
+    .SScrew .overlay .box-content .content .image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .SScrew .overlay .box-content .content .image h4 {
+        font-size: 1.4rem;
+    }
+
+    .SScrew .overlay .box-content .content .image img {
+        top: 50%;
+        height: auto;
+    }
+
+    .SScrew .overlay .box-content .content .topic {
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .SScrew .overlay .box-content .content .topic h4 {
+        font-size: 1.6rem;
+    }
+
+    .SScrew .overlay .box-content .content .topic p {
+        font-size: 1.2rem;
+    }
+
+    .SScrew .overlay .box-content .content .topic p span {
+        font-size: 1.4rem;
+    }
+}
+
+/* End SScrew */
+
+/* Start Satalites*/
+
+.SSsatalites {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.SSsatalites .overlay {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px 10px ;
+    background-color: #0626b644;
+}
+
+.SSsatalites .overlay .title-satalites {
+    width: 100%;
+    background-color: var(--main-color-4);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 0 0 10px 10px ;
+    box-shadow: inset 0 0 5px black;
+    margin: 0 0 20px;
+}
+
+.SSsatalites .overlay .title-satalites img {
+    width: 100%;
+    border-top: 5px solid var(--main-color-4);
+}
+
+.SSsatalites .overlay .title-satalites h2 {
+    font-size: 2.5rem;
+    font-family: var(--main-font-4);
+    color: var(--main-color-6);
+    margin: 10px 0;
+}
+
+.SSsatalites .topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.SSsatalites .topic h4 {
+    font-size:  2.5rem;
+    font-family: var(--main-font-1);
+    color: var(--main-color-6);
+    margin: 0 0 20px;
+}
+
+.SSsatalites .topic p {
+    font-size: 1.7rem;
+    color: var(--main-color-5);
+    text-align: center;
+    font-family: var(--main-font-4);
+    max-width: 1000px;
+    border-radius: 10px;
+    background-color: #00000098;
+    line-height: 1.9;
+    padding: 15px;
+    margin: 0 5px;
+}
+
+.SSsatalites .topic p span {
+    font-size: 2.5rem;
+    color: var(--main-color-1);
+    font-weight: bold;
+    display: block;
+}
+
+.SSsatalites .overlay .topic h3 {
+    font-size: 2.5rem;
+    margin: 20px  auto;
+    font-family: var(--main-font-1);
+    color: var(--main-color-6);
+}
+
+.SSsatalites .overlay .topic ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    max-width: 600px;
+    
+}
+
+.SSsatalites .overlay .topic ul li {
+    position: relative;
+    font-size: 1.3rem ;
+    color: var(--main-color-5);
+    margin: 10px;
+    font-family: var(--main-font-4);
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+
+.SSsatalites .overlay .topic ul li::after {
+    content : "" ;
+    position :absolute;
+    width : 100% ;
+    height: 2px;
+    background-color: var(--main-color-5);
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    opacity: 0.2;
+    transition: var(--main-transition);
+}
+
+.SSsatalites .overlay .topic ul li:hover::after {
+    opacity: 1;
+    box-shadow:  0 0 5px #B2FFFF;
+}
+
+.SSsatalites .overlay .topic .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.SSsatalites .overlay .topic .content .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px ;
+}
+
+.SSsatalites .overlay .topic .content .image img{
+    width: 200px ;
+}
+
+.SSsatalites .overlay .topic .content .image h3{
+    font-size: 1.8rem;
+}
+
+.SSsatalites .overlay .topic .content .about p{
+    font-size: 1.6rem;
+}
+
+@media (max-width : 767px) {
+    .SSsatalites .topic p {
+        font-size: 1.4rem;
+    }
+
+    .SSsatalites .topic h4 {
+        font-size: 1.6rem;
+    }
+
+    .SSsatalites .overlay .title-satalites {
+        width: 90%;
+    }
+
+    .SSsatalites .overlay .title-satalites h2 {
+        font-size: 2rem;
+    }
+
+    .SSsatalites .overlay .topic .content .image img{
+        width: 120px ;
+    }
+    
+    .SSsatalites .overlay .topic .content .image h3{
+        font-size: 1.4rem;
+    }
+    
+    .SSsatalites .overlay .topic .content .about p{
+        font-size: 1.1rem;
+    }
+
+    .SSsatalites .overlay .topic h3 {
+        font-size: 1.6rem;
+    }
+    
+}
+
+@media (max-width : 400px) {
+    .SSsatalites .topic p {
+        font-size: 1.2rem;
+    }
+
+    .SSsatalites .topic h4 {
+        font-size: 1.4rem;
+    }
+
+    .SSsatalites .topic p span {
+        font-size: 1.5rem;
+    }
+
+    .SSsatalites .overlay .topic .content .image img{
+        width: 100px ;
+    }
+    
+    .SSsatalites .overlay .topic .content .image h3{
+        font-size: 1.1rem;
+    }
+    
+    .SSsatalites .overlay .topic .content .about p{
+        font-size: 0.8rem;
+        text-align: right;
+    }
+
+    .SSsatalites .overlay .topic h3 {
+        font-size: 1.3rem;
+    }
+}
+/* End Satalites */
+
+/* Start Celestial */
+
+.SScelestial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    padding: 100px 10px 10px;
+    background-size: cover;
+}
+
+.SScelestial .title-astro {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color-4);
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px black;
+    margin: 10px 0;
+}
+
+.SScelestial .title-astro h2 {
+    font-size: 2.5rem;
+    color: var(--main-color-5);
+    margin: 10px 0;
+    font-family: var(--main-font-4);
+}
+
+.SScelestial .title-astro img {
+    width: 100%;
+}
+
+
+.SScelestial .topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.SScelestial .topic h3 {
+    font-size:  2.5rem;
+    font-family: var(--main-font-1);
+    color: var(--main-color-6);
+    margin: 0 0 20px;
+}
+
+.SScelestial .topic p {
+    font-size: 1.7rem;
+    color: var(--main-color-5);
+    text-align: center;
+    font-family: var(--main-font-4);
+    max-width: 1000px;
+    border-radius: 10px;
+    background-color: #00000098;
+    line-height: 1.9;
+    padding: 15px;
+}
+
+.SScelestial .topic p span {
+    font-size: 2.5rem;
+    color: var(--main-color-1);
+    font-weight: bold;
+    display: block;
+}
+
+
+.SScelestial ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    max-width: 650px;
+    overflow: auto;
+}
+
+.SScelestial ul li {
+    position: relative;
+    font-size: 1.3rem ;
+    color: var(--main-color-3);
+    margin: 10px;
+    font-family: var(--main-font-1);
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+
+.SScelestial ul li::after {
+    content : "" ;
+    position :absolute;
+    width : 100% ;
+    height: 2px;
+    background-color: #000080;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    opacity: 0.2;
+    transition: var(--main-transition);
+}
+
+.SScelestial ul li:hover::after {
+    opacity: 1;
+    box-shadow:  0 0 5px #3e68f1;
+}
+
+.SScelestial .box-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 50px;
+}
+
+.SScelestial .box-content .active {
+    display: flex !important;
+}
+
+.SScelestial .box-content .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.SScelestial .box-content .content .image{
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.SScelestial .box-content .content .image img{
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0 ,-50%);
+    width: 250px;
+    transition: var(--main-transition);
+    animation: bigSmall 3s infinite;
+}
+
+.SScelestial .box-content .content .topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55%;
+    margin: auto;
+    height: 90% ;
+}
+
+.SScelestial .box-content .content .topic h4{
+    font-size: 3rem;
+    font-family: var(--main-font-1);
+    color: var(--main-color-6);
+    margin: 20px 0;
+}
+
+.SScelestial .box-content .content .topic p{
+    color: var(--main-color-5);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: var(--main-font-4);
+}
+
+@media (max-width: 767px) {
+    .SScelestial h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .SScelestial ul {
+        max-width: 370px;
+        overflow-x: scroll;
+        justify-content: right;
+    }
+
+    .SScelestial .topic h3 {
+        font-size: 1.8rem;
+    }
+
+    .SScelestial .box-content .content {
+        flex-direction: column;
+    }
+
+    .SScelestial .box-content .content .image {
+        width: 70%;
+        height: 400px;
+    }
+
+    .SScelestial .box-content .content .image h4 {
+        font-size: 1.8rem;
+    }
+
+    .SScelestial .box-content .content .image img {
+        animation: bigSmall 5s infinite;
+        top: 40%;
+    }
+
+    .SScelestial .box-content .content .topic {
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .SScelestial .box-content .content .topic h4 {
+        font-size: 2.5rem;
+    }
+
+    .SScelestial .box-content .content .topic p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .SScelestial h3 {
+        font-size: 1.9rem
+    }
+
+    .SScelestial .topic h3 {
+        font-size: 1.5rem;
+    }
+
+    .SScelestial ul {
+        max-width: 220px;
+        overflow-x: scroll;
+        justify-content: right;
+    }
+
+    .SScelestial .box-content .content {
+        flex-direction: column;
+    }
+
+    .SScelestial .box-content .content .image {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .SScelestial .box-content .content .image h4 {
+        font-size: 1.4rem;
+    }
+
+    .SScelestial .box-content .content .image img {
+        animation: bigSmall 5s infinite;
+        top: 50%;
+        width: 200px;
+    }
+
+    .SScelestial .box-content .content .topic {
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    .SScelestial .box-content .content .topic h4 {
+        font-size: 1.6rem;
+    }
+
+    .SScelestial .box-content .content .topic p {
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes bigSmall {
+    0% {
+        width: 70%;
+    }
+    50% {
+        width: 85%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@media (max-width : 767px) {
+    .SScelestial .title-astro h2 {
+        font-size: 2rem;
+    }
+
+    .SScelestial .topic h4 {
+        font-size:  2rem;
+    }
+    
+    .SScelestial .topic p {
+        font-size: 1.3rem;
+    }
+    
+    .SScelestial .topic p span {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width : 400px) {
+    .SScelestial .title-astro {
+        width: 95%;
+    }
+
+    .SScelestial .title-astro h2 {
+        font-size: 1.8rem;
+        color: var(--main-color-6);
+    }
+
+    .SScelestial .topic h4 {
+        font-size:  1.7rem;
+    }
+    
+    .SScelestial .topic p {
+        font-size: 1rem;
+    }
+    
+    .SScelestial .topic p span {
+        font-size: 1.5rem;
+    }
+}
+
+/* End Celestial */
+  
+/* Start Sphysics */
+
+.Sphysics {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.Sphysics .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 100px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sphysics .overlay .image-title {
+    width: 70%;
+    height: auto;
+    background-color: var(--main-color-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black inset;
+    margin: 0 0 50px;
+}
+
+.Sphysics .overlay .image-title img {
+    width: 100%;
+    border-top: 2px solid var(--main-color-1);
+}
+
+.Sphysics .overlay .image-title h3 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    font-family: var(--main-font-4);
+    color: var(--main-color-6);
+}
+
+.Sphysics .overlay .topic {
+    width: 90%;
+    background-color: #00000098;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.Sphysics .overlay .topic p {
+    font-size: 1.8rem;
+    font-family: var(--main-font-4);
+    color: var(--main-color-5);
+    line-height: 1.5;
+    direction: rtl
+}
+
+
+.Sphysics .overlay .topic span {
+    display: block;
+    color: var(--main-color-1);
+    font-family: var(--main-font-1);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 10px 0 ;
+}
+
+.Sphysics .overlay .topic a {
+    text-decoration: none;
+    color: var(--black) ; 
+}
+
+.overlay .topic a:hover {
+    transition: var(--main-transition);
+    color: white;
+
+}
+
+@media (max-width: 767px) {
+    .Sphysics .overlay .image-title {
+        width: 90%;
+    }
+
+    .Sphysics .overlay .image-title h3 {
+        font-size: 1.8rem;
+    }
+
+    .Sphysics .overlay .topic {
+        width: 95%;
+    }
+
+    .Sphysics .overlay .topic p {
+        font-size: 1.4rem;
+    }
+
+    .Sphysics .overlay .topic span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .Sphysics .overlay .image-title {
+        width: 90%;
+    }
+
+    .Sphysics .overlay .image-title h3 {
+        font-size: 1.4rem;
+    }
+
+    .Sphysics .overlay .topic {
+        width: 95%;
+    }
+
+    .Sphysics .overlay .topic p {
+        font-size: 1.1rem;
+    }
+
+    .Sphysics .overlay .topic span {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* End Sphysics  */
+
+/* check Readed */
+
+.checkReaded {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    direction: rtl;
+}
+
+.checkReaded h6 {
+    font-size: 1.5rem;
+    color: var(--main-color-3);
+}
+
+.checkReaded form {
+    padding: 10px ;
+}
+
+.checkReaded form input[type="checkbox"] {
+    display: none;
+}
+
+.checkReaded form button {
+    width: 100px;
+    font-size: 1.2rem;
+    font-family: var(--main-font-4);
+    color: var(--main-color-5);
+    font-weight: bold;
+    border: none;
+    border: 2px solid var(--main-color-5);
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #0000ca;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.checkReaded form button:hover {
+    background-color: var(--main-color-3);
+}
+
+/* Share content */
+
+.Share {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    direction: rtl;
+}
+
+.Share .text h6 {
+    font-size: 1.7rem;
+    font-family: var(--main-font-1);
+    color: #000080;
+}
+
+.Share .clicking {
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.Share .clicking .bot {
+    display: flex ;
+    margin: 10px;
+    justify-content: space-around;
+    padding: 5px ;
+    border-radius: 10px;
+    border : 2px solid var(--main-color-5) ;
+    box-shadow: 0 0 3px black;
+    transition: var(--main-transition);
+}
+
+.Share .clicking .bot:hover {
+    box-shadow: 0 0 10px var(--main-color-5);
+}
+
+.Share .clicking .fbC {
+    background-color: #4080ff;
+}
+
+.Share .clicking .twC {
+    background-color: #1d9bf0;
+}
+
+.Share .clicking .bot i {
+    color: var(--main-color-6) ;
+    display: inline;
+    padding: 5px;
+    font-size: 1.4rem;
+    border-right: 2px solid var(--main-color-5);
+}
+
+.Share .clicking .bot h5 {
+    display: inline;
+    margin: 5px;
+    font-size: 1.4rem;
+    font-family: var(--main-font-3);
+}
+
+
+@media (max-width : 767px) {
+    .Share .text h6 {
+        font-size: 1.6rem;
+    }
+    .Share .clicking {
+        width : auto;
+    }
+    .Share .clicking .bot i {
+        font-size: 1.2rem;
+    }
+    .Share .clicking .bot h5 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width : 400px) {
+    .Share .text h6 {
+        font-size: 1.2rem;
+    }
+    .Share .clicking {
+        width : auto;
+    }
+    .Share .clicking .bot i {
+        font-size: 1rem;
+    }
+    .Share .clicking .bot h5 {
+        font-size: 1rem;
+    }
+}
+
+/* Ads conter  */
+
+.ads-conter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ads-conter h6 {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-family: var(--main-font-1);
+    color: var(--main-color-3);
+    text-align: center;
+}
+
+.ads-conter fieldset {
+    width: 95%;
+    height: 100px;
+    margin: 20px 0;
+}
+
+
+/* Copyright */
+
+
+.copyright {
+    width: 100%;
+    height: 40px;
+    background-color: #040b1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.copyright .end-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright .end-text p{
+    font-size: 1.2rem;
+    color: var(--white);
+}

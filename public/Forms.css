@@ -1,0 +1,364 @@
+:root {
+	--main-font-h : 'El Messiri', sans-serif ;
+	--main-font-p :  'Markazi Text', serif ;
+	--main-color-7 : #00007a ;
+	--main-color-8 : #006eff ;
+	--main-transition : all 0.6s ease-out ; 
+}
+
+/* Start Forms */
+
+#Forms {
+	direction: rtl;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000c2;
+	transition: var(--main-transition);
+	perspective: 1500px;
+	font-family: var(--main-font-h);
+	display: none;
+}
+
+#Forms .form {
+	position: absolute;
+	width: 400px;
+	height: 600px;
+	padding: 20px;
+	transform-style: preserve-3d;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 20px;
+	background-color: #ffffffe1;
+	box-shadow: 0 0 20px black;
+	overflow: hidden;
+}
+
+#Forms .form::after {
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(180deg, #006eff 6% , #ffffff00);
+    z-index: -1;
+}
+
+#Forms #signInCard {
+	transform: rotateY(180deg);
+	transition: var(--main-transition);
+	backface-visibility: hidden;
+}
+
+#Forms #signUpCard {
+	transform: rotateY(0)  ;
+	transition: var(--main-transition);
+	backface-visibility: hidden;
+}
+
+#Forms .form .forAnim {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin:10px 0 20px;
+}
+
+#Forms .form .forAnim h2 {
+	color: var(--main-color-7);
+	font-size: 1.6rem;
+}
+
+#Forms .form form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 40px;
+}
+
+#Forms .form form h5 {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	font-size: 1.1rem;
+	color: #9f0000;
+	font-family: var(--main-font-1);
+	font-weight: bold;
+}
+
+#Forms .form form input[type="user"] {
+	position: relative;
+	margin: 20px 0;
+	font-size: 1.8rem;
+	border: none;
+	outline: none;
+	padding: 2px 5px;
+	font-family: var(--main-font-p);
+	background-color: rgba(219, 219, 219, 0.301);
+	transition: var(--main-transition);
+	color: var(--main-color-7);
+	border: 2px solid rgba(0, 162, 255, 0.541);
+	z-index: 10;
+	overflow: hidden;
+}
+
+#Forms .form form input[type="password"] {
+	position: relative;
+	margin: 20px 0;
+	font-size: 1.8rem;
+	border: none;
+	outline: none;
+	padding: 2px 5px;
+	font-family: var(--main-font-p);
+	color: var(--main-color-7);
+	background-color: rgba(219, 219, 219, 0.301);
+	transition: var(--main-transition);
+	color: var(--main-color-7);
+	border: 2px solid rgba(0, 162, 255, 0.541);
+	z-index: 10;
+	overflow: hidden;
+}
+
+#Forms .form form .gender {
+	position: absolute;
+	width: 100%;
+	bottom: 35px;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+#Forms .form form .gender input[type='radio'] {
+	display: none;
+}
+
+#Forms .form form .gender label img {
+	width: 20px;
+	transition: var(--main-transition);
+}
+
+#Forms .form form .gender label img:hover {
+	border-radius: 50%;
+	border: 2px solid var(--main-color-7);
+	padding: 10px;
+}
+
+#Forms .form form input:focus {
+	background-color: aliceblue;
+	border: none;
+	border-bottom: 3px solid var(--main-color-7);
+}
+
+#Forms .form form #showHide {
+	width: 100px;
+	font-size: 1rem;
+	font-family: var(--main-font-p);
+	background-color: var(--main-color-8);
+	border: none;
+	outline: none;
+	margin: 0 0 20px 0;
+	color: aliceblue;
+	padding: 5px 6px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+
+
+#Forms .form form .checkMember {
+	display: flex;
+	align-items: center;
+	margin: 0 0 30px 0;
+}
+
+#Forms .form form .checkMember input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px ;
+}
+
+#Forms .form form .checkMember label {
+	font-size: 1.4rem;
+}
+
+#Forms .form form input[type="submit"] {
+	font-size: 2rem;
+	font-family: var(--main-font-h);
+	background-color: var(--main-color-8);
+	border: none;
+	outline: none;
+	margin: 10px 0 0 0;
+	color: aliceblue;
+	padding: 8px 5px;
+	cursor: pointer;
+	z-index: 5;
+}
+
+#Forms .form a {
+	text-decoration: none;
+	color: #00007a;
+	margin-bottom: 10px;
+}
+
+#Forms #Skip {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: var(--main-color-8);
+	width: 30px;
+	height: 30px;
+	color: white;
+	font-size: 1rem;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 0 0 10px white;
+	cursor: pointer;
+	
+}
+
+
+@media (max-width : 450px) {
+	#Forms .form {
+		width: 350px;
+		height: 600px;
+		padding: 10px;
+	}
+	#Forms .form .forAnim h2 {
+		font-size: 1.4rem;
+	}
+
+	#Forms .form form h5 {
+		font-size: 0.8rem;
+	}
+
+	#Forms .form form input[type="user"] {
+		font-size: 1.4rem;
+	}
+	#Forms .form form input[type="password"] {
+		font-size: 1.4rem;
+	}
+	#Forms .form form .checkMember input[type="checkbox"] {
+		width: 15px;
+		height: 15px;
+	}
+	#Forms .form form .checkMember label {
+		font-size: 1.2rem;
+	}
+	#Forms .form form input[type="submit"] {
+		font-size: 1.6rem;
+	}
+}
+
+
+@media (max-width : 370px) {
+	#Forms .form {
+		width: 280px;
+		height: 500px;
+		padding: 5px;
+	}
+	#Forms .form .forAnim h2 {
+		font-size: 1rem;
+	}
+	#Forms .form form input[type="user"] {
+		font-size: 1rem;
+	}
+	#Forms .form form input[type="password"] {
+		font-size: 1rem;
+	}
+	#Forms .form form .checkMember input[type="checkbox"] {
+		width: 10px;
+		height: 10px;
+	}
+	#Forms .form form .checkMember label {
+		font-size: 1rem;
+	}
+	#Forms .form form input[type="submit"] {
+		font-size: 1.2rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animation */
+#Forms #animation{
+	z-index: 1000;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transition: var(--main-transition);
+	opacity: 0.8;
+	margin: 0 30px;
+}
+#Forms #animation .rocket{
+	position:absolute;
+	animation:spin 3s linear infinite;
+	width: 80px;
+	height: 30px;
+}
+
+#Forms #animation .rocket img {
+	transform: rotate(180deg);
+}
+
+#Forms #animation #moonForm {
+	width: 40px;
+	transition: var(--main-transition);
+	transform:rotateY(10deg);
+	backface-visibility: hidden;
+}
+@keyframes spin { 
+	0% { -webkit-transform: rotate(0deg);transform:rotate(0deg);}
+	25% { -webkit-transform: rotate(90deg);transform:rotate(90deg);}
+	50% { -webkit-transform: rotate(180deg);transform:rotate(180deg);}
+	75% { -webkit-transform: rotate(270deg);transform:rotate(270deg);}
+	100% { -webkit-transform: rotate(360deg);transform:rotate(360deg);} 
+}
+

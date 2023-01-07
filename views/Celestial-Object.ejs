@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <meta name="keywords" content="celestial Objects , celestial body ,  الاجرام السماوية , الشمس , النجوم , الاقمار , الارض , السماء , الفضاء , الفلك , المذنبات , النيازك , الشهب , الفرق بين الاجرام السماوية , الفرق بين">
+    <meta name="description" content="الكون مكان واسع جداً ينتشر فيه الاجسام الكبيرة و الصغيرة و السوائل و الغازات ، لا احد يستطيع ان يحصى عددهم ولكنك بالطبع تريد ان تعرف عدداً منهم ">
+    <meta name="auther" content="Space Youth Forum منتدى شباب الفضاء">
+    <meta name="theme-color" content="#26b0ff">
+    <meta name="robots" content="index,follow">
+
+    <!-- End SEO -->
+    <meta property="og:site_name" content="ما يسبح فى فضاء الكون"/>
+    <meta property="og:title" content="الاجرام السماوية" /> 
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:description" content="الكون مكان واسع جداً ينتشر فيه الاجسام الكبيرة و الصغيرة و السوائل و الغازات ، لا احد يستطيع ان يحصى عددهم ولكنك بالطبع تريد ان تعرف عدداً منهم " />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../image/celestial.png" />
+    
+    <!-- Css Files  -->
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../Topics.css">
+    <link rel="stylesheet" href="../animation.css">
+
+    <!-- Logo for the website -->
+    <link rel="icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon-precomposed" href="../image/logo.ico">
+    <link rel="shortcut icon" href="../image/logo.ico">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/fa3c9a78d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font Links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Cinzel+Decorative:wght@400;700&family=Markazi+Text&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>Celestial Objects</title>
+</head>
+<body>
+
+    <!-- Start header  -->
+    <%- include('partials/header')  %> 
+    <!-- End header -->
+
+    <div class="SScelestial">
+        <div class="title-astro">
+            <h2>الأجرام السماوية</h2>
+            <img src="../image/celestial.png" alt="iss">
+        </div>
+        <div class="topic">
+            <h3>ما يسبح فى فضاء الكون</h3>
+            <p>
+                <span>ما هو الجرم السماوي ؟</span>
+                الجرم السماوي Celestial Body هو مصطلح شامل للكون أجمع، ويمثل الجرم السماوي كل ما يوجد في الفضاء الخارجي من كواكب ونجوم وأقمار وأي أجسام أخرى في النظام الشمسي أي أنّه يشمل أي جسم طبيعي يوجد خارج الغلاف الجوي للأرض إضافةً إلى الأرض في حد ذاتها كما توجد الكثير من الأجرام السماوية التي لم تُكتشف بعد، نظرًا لحجم الفضاء الخارجي الهائل الذي يحول دون معرفة جميع مكوّناته.<br>
+                
+                <span>علم الاجرام السماوية</span> 
+                
+                من الممكن تعريف الأجرام السماوية على أنّها كائنات في الفضاء مثل الشّمس والقمر والكواكب والنجوم والتي تشكّل جزءًا من الكون الواسع وعادةً ما تكون بعيدة، وتنتشر الأجرام السماويّة في السّماء ومن الممكن ملاحظتها باستخدام التلسكوب نظرًا لأنها بعيدة جدًا كما أنّه لا يمكن رؤيتها جميعًا بالعين المجرّدة ويمكن تصنيف الأجرام السماويّة كالآتي:<br>
+            </p>
+        </div>
+
+        <ul>
+            <li data-cbody="stars">النجوم</li>
+            <li data-cbody="planets">الكواكب</li>
+            <li data-cbody="moons">الاقمار</li>
+            <li data-cbody="comets">المذنبات</li>
+            <li data-cbody="meteories">النيازك</li>
+            <li data-cbody="meteors">الشهب</li>
+            <li data-cbody="asteroid">الكويكبات</li>
+            <li data-cbody="galaxy">المجرات</li>
+        </ul>
+
+        <div class="box-content">
+            <!-- stars -->
+            <div id="stars" class="content active">
+                <div class="image">
+                    <img src="../image/sun.png" alt="sun">
+                </div>
+                <div class="topic">
+                    <h4>النجوم</h4>
+                    <p>تُعرَف النجوم على أنها كرات كبيرة الحجم ذات جاذبية هائلة، مُكوّنة من غازات ساخنة تمدها بالإضاءة وتنشأ الطاقة داخل النجوم عن طريق تحويل الهيدروجين إلى هيليوم والشمس من الأمثلة على النجوم القريبة من الأرض وهي نجم ذو حجم متوسط يمنح الأرض الطاقة ويجعل الحياة عليها ممكنة وتُرَى عدة نجوم أخرى بالعين المجردة من الأرض في أثناء الليل ولكن تظهر كنقاط ثابتة ومضيئة في السماء نظرًا لبُعدها الهائل عن الأرض</p>
+                </div>
+            </div>
+            
+            <!-- planets -->
+            <div id="planets" class="content">
+                <div class="image">
+                    <img src="../image/planet.png" alt="planets">
+                </div>
+                <div class="topic">
+                    <h4>الكواكب</h4>
+                    <p>تُعرَف الكواكب على أنها أجسام كروية كبيرة الحجم تدور حول الشمس في مداراتٍ ثابتة وتحتوي المجموعة الشمسية على 8 كواكب
+                        وهي: 
+                        عطارد، والزهرة، والأرض، والمريخ، والمشتري، وزحل، وأورانوس، ونبتون،
+                        وتتكون جميعها من المعادن الصخور والغازات مثل: 
+                        الهيدروجين، والنيتروجين، والميثان وتعدّ الأرض الكوكب الوحيد في المجموعة الشمسية الذي يدعم وجود الحياة أما الكواكب التي تدور حول نجوم أخرى فتسمى بالكواكب الخارجية
+                        </p>
+                </div>
+            </div>
+            
+            <!-- moons -->
+            <div id="moons" class="content">
+                <div class="image">
+                    <img src="../image/moon.png" alt="moons">
+                </div>
+                <div class="topic">
+                    <h4>الأقمار</h4>
+                    <p>تدور الاقمار حول الكواكب وتشكل جزءًا أساسيًّا من الأجرام السماوية وتكون إما قد نشأت منذ القدم وتُسمى بالأقمار طبيعية مثل قمر الأرض الذي يُعدّ تابعًا لها ويدور حولها بفعل الجاذبية وإما تكون من صنع الإنسان وتُسمى بالأقمار الصناعية، وهي تدور حول الأرض والكواكب الأخرى بغرض دراسة الكواكب ولأغراض أخرى مثل التواصل</p>
+                </div>
+            </div>
+            
+            <!-- comets -->
+            <div id="comets" class="content">
+                <div class="image">
+                    <img src="../image/comet.png" alt="comets">
+                </div>
+                <div class="topic">
+                    <h4>المذنبات</h4>
+                    <p>تُعرَف المذنبات على أنها قطع صغيرة من الجليد والصخور قادمة من الحواف الخارجية للمجموعة الشمسية ويؤدي اقترابها من مدار الشمس إلى تبخر الجليد ويُعرف هذا باسم إطلاق الغازات ما يُشكل ذيلًا لامعًا خلفها وتتميز المذنبات عن الكويكبات بوجود غلاف جوي ممتد بالقرب من قلبها المركزي بسبب الجاذبية ومع ذلك فإنّ المذنبات الميتة التي مرت بالقرب من الشمس عدة مرات وفقدت تقريبًا كل جليدها المتطاير وغبارها قد تشبه الكويكبات الصغيرة.</p>
+                </div>
+            </div>
+            
+            <!-- meteories -->
+            <div id="meteories" class="content">
+                <div class="image">
+                    <img src="../image/comet-2.png" alt="meteories">
+                </div>
+                <div class="topic">
+                    <h4>النيازك</h4>
+                    <p>تُعرَف النيزك على أنها أجسام ضخمة قادمة من الفضاء لها القدرة على الوصول إلى اليابسة والارتطام بالأرض مكونة فوهة كبيرة بها</p>
+                </div>
+            </div>
+            
+            <!-- meteors -->
+            <div id="meteors" class="content">
+                <div class="image">
+                    <img src="../image/meteor.png" alt="meteor">
+                </div>
+                <div class="topic">
+                    <h4>الشهب</h4>
+                    <p>فهي أجسام تدخل إلى الغلاف الجوي بفعل قوة الجاذبية الأرضية ومعظم هذه الشهب تكون صغيرة الحجم وتحترق في الغلاف الجوي فور دخولها إلى الأرض لتشكل عند احتراقها خطوطًا لامعة في السماء</p>
+                </div>
+            </div>
+            
+            <!-- asteroid -->
+            <div id="asteroid" class="content">
+                <div class="image">
+                    <img src="../image/asteroid.png" alt="asteroid">
+                </div>
+                <div class="topic">
+                    <h4>الكويكبات</h4>
+                    <p>
+                        وهي صخور صغيرة غير منتظمة الشكل مكوّنة من معادن تدور حول الشمس في مداراد غير محدده ولاكن معظمها يتجمع عن الحافه او في منتصف المجموعة الشمسية عند حزام الكويكبات
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Galaxy -->
+            <div id="galaxy" class="content">
+                <div class="image">
+                    <img src="../image/galaxy.png" alt="galaxy">
+                </div>
+                <div class="topic">
+                    <h4>المجرات</h4>
+                    <p>
+                        تُعرَف المجرة على أنّها نظام مترامي الأطراف من الغبار والغاز والنجوم المرتبطة ببعضها بعضًا بفعل الجاذبية، على سبيل المثال:<br>
+                        مجرة درب التبانة التي تضم الشمس والكواكب وباقي أجرام المجموعة الشمسية وغيرها من العناصر الفضائية <br>
+                        وهناك عدد كبير من المجرات البعيدة جدًا عن كوكب الأرض التي تبدو ليلًا على شكل نجوم في السماء<br>
+                        أما مجرة أندروميدا ، 
+                        وسحابة ماجلان الكبرى
+                        فيمكن رؤيتهما بالعين المجردة في سماء ليلة صافية وصُنِّفت المجرات في أربعة مجموعات رئيسية، <strong>تتمثل في الآتي:</strong><br>
+                        ○ المجرات الحلزونية spiral galaxies<br>
+                        ○ المجرات العدسية lenticular galaxies <br>
+                        ○ المجرات الإهليلجية elliptical galaxies <br>
+                        </p>
+                </div>
+            </div>
+            
+
+        </div>
+
+        
+
+
+    </div>
+
+
+    <div class="checkReaded">
+        <h6>هل أتممت قراءة المقال</h6>
+        <form method="post" id="Creading" action="/read">
+            <input type="checkbox" name="articalName" value="الأجرام السماوية" checked>
+            <input type="checkbox" name="userID" id="checking" checked>
+            <button>نعم</button>
+        </form>
+    </div>
+
+    <div class="Share">
+        <div class="text">
+            <h6>مشاركة المقال</h6>
+        </div>
+        <div class="clicking">
+            <div class="fbC bot"><a href="#shareFacebook" onclick="shareFacebook('https://www.facebook.com/sharer/sharer.php?u=https://space-youth-forum.herokuapp.com/Topics/Celestial-Object')"><i class="fa-brands fa-facebook-f"></i><h5>Facebook</h5></a></div>
+            <div class="twC bot"><a href="#shareTwitter" onclick="shareTwitter('http://www.twitter.com/share?url=https://space-youth-forum.herokuapp.com/Topics/Celestial-Object')"><i class="fa-brands fa-twitter"></i><h5>Twitter</h5></a></div>
+        </div>
+    </div>
+
+    <div class="ads-conter">
+        <hr>
+        <h6>أعلان</h6>
+        <fieldset>
+            
+        </fieldset>
+        <hr>
+    </div>
+
+
+    <section class="copyright">
+        <div class="end-text">
+            <p> &copy; Copyright 2022 Space Youth Forum</p>
+        </div>
+    </section>
+
+    <!-- Loading page  -->
+    <div id="loadingPage">
+        <div class="space">
+            <div class="f-circle"></div>
+            <div class="s-circle"></div>
+            <div class="t-circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script>
+
+        if (localStorage.getItem("UserData")) {
+            let userData = JSON.parse(localStorage.getItem('UserData'))
+            let userid = userData.id
+            document.getElementById('Creading').onsubmit = () => {
+                let checking = document.getElementById('checking')
+                checking.setAttribute('value' , userid)
+    
+                return true
+            }
+        } else {
+            document.getElementById('Creading').onsubmit = () => {
+                return false
+            }
+        }
+
+        let lis = document.querySelectorAll('ul li')
+
+        lis.forEach((li) => {
+            li.addEventListener('click' , function () {
+                window.localStorage.setItem('celestial' , li.dataset.cbody)
+                let Allcontent = document.querySelectorAll('.content')
+                Allcontent.forEach((content) => {
+                    content.classList.remove('active')
+                })
+                document.getElementById(li.dataset.cbody).classList.add('active')
+            })
+        })
+
+        function block() {
+            let click = document.getElementById('listLogo')
+            click.onclick = function () {
+                document.getElementById('listUl').classList.toggle('show');
+            };
+
+            document.getElementById('listUl').onclick = function () {
+                document.getElementById('listUl').classList.toggle('show')
+            }
+        }
+
+        // ++++++++++++++++++++ Loading Page ++++++++++++++++++++++++
+        window.onload = () => {
+            let LoadingPage = document.querySelector('#loadingPage')
+
+            LoadingPage.style.opacity = '1'
+            LoadingPage.style.display = 'flex' 
+            document.body.style.overflow = 'hidden'
+
+            setTimeout(() => {
+                document.body.style.overflow = 'auto'
+                LoadingPage.style.opacity = '0'        
+            }, 3000);
+
+            setTimeout(() => {
+                LoadingPage.style.display = 'none'
+            }, 4000);
+
+        }
+
+
+        // Sharing Links social media
+
+        function shareFacebook(href) {
+            window.open(href , 'fbwin' , 'left=20 , top=10 , width=300 , height=600 , resizable=0')
+        }
+        function shareTwitter(href) {
+            window.open(href , 'fbwin' , 'left=20 , top=10 , width=300 , height=600 , resizable=0')
+        }
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        let copyright = document.querySelector('.copyright .end-text p')
+
+        let year = new Date()
+
+        copyright.innerHTML =` &copy; Copyright ${year.getFullYear()} SYF`
+
+    </script>
+</body>
+</html>

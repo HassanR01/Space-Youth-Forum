@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <meta name="keywords" content="Hassan , HTML , CSS , JavaScript , space , astronomy , Space Youth Forum , HR , Nasa Egypt , Nasa , Space Egyption Agency , اتحاد شباب الفضاء , علم الفلك , الفضاء , عجائب الفضاء">
+    <meta name="auther" content="Hassan Space Youth Forum">
+    <meta name="theme-color" content="#26b0ff">
+    <meta name="robots" content="index,follow">
+    
+    <!-- Css Files  -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="challenges.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <!-- Logo for the website -->
+    <link rel="icon" href="image/logo.ico">
+    <link rel="apple-touch-icon" href="image/logo.ico">
+    <link rel="apple-touch-icon-precomposed" href="image/logo.ico">
+    <link rel="shortcut icon" href="image/logo.ico">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/fa3c9a78d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font Links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Cinzel+Decorative:wght@400;700&family=Markazi+Text&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>Challenge</title>
+</head>
+<body>
+
+    <!-- Start header  -->
+    <header>
+        <div class="contener">
+            <div class="logo">
+                <a href="/Home"><img src="image/Logo.png" alt="logo"></a>
+                <h1 class="title-h1">Space Youth Forum</h1>
+            </div>
+            <div class="navegation">
+                <nav>
+                    <div class="i" id="listLogo" onclick="block()">
+                        <span class="i1"></span>
+                        <span class="i2"></span>
+                        <span class="i3"></span>
+                    </div>
+                    <ul id="listUl">
+                        <li><a href="/Home">الرئيسة</a></li>
+                        <li><a href="/Topics">المواضيع</a></li>
+                        <li><a href="/Events">الأحداث</a></li>
+                        <li><a href="/Top">المتصدرين</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+    <!-- landing-question -->
+    <div class="section-view">
+        <div class="title">
+            <h2>Challenge & Questions</h2>
+            <p>هل انت جاهز للتحدى ؟</p>
+        </div>
+    </div>
+    
+    <div class="contenerChallenges">
+        <div class="challenges">
+            <% challenges.forEach((challenge) => { %>
+                <div class="challenge">
+                    <h4><%= challenge.title.Qname %></h4>
+                    <div class="goChallenge">
+                        <p><%= challenge.title.Qpoints %>+</p>
+                        <a href="/challenges/<%= challenge.id %> ">عرض التحدي</a>
+                    </div>
+                </div>
+            <% }) %>
+            
+        </div>
+
+        <div id="AddingForm" class="addingChallenges">
+            <h3>إضافة تحدي</h3>
+            <form id="addChForm" action="/challenges" method="post">
+                <input type="text" name="Qname" id="Qname" placeholder="عنوان التحدي" required>
+                <input type="number" name="Qpoints" id="Qpoints" placeholder="نقاط مقابل للتحدي" required>
+                <hr>
+                <textarea name="Qhead" id="Qhead" placeholder="ضع شرح التحدي" ></textarea>
+                <input type="text" name="Qchoose1" id="Qchoose1" placeholder="ضع الاجابة الأولى" required>
+                <input type="text" name="Qstatus1" id="Qstatus1" placeholder="true or false">
+                <input type="text" name="Qchoose2" id="Qchoose2" placeholder="ضع الاجابة الثانية" required>
+                <input type="text" name="Qstatus2" id="Qstatus2" placeholder="true or false">
+                <input type="text" name="Qchoose3" id="Qchoose3" placeholder="ضع الاجابة الثالثة" required>
+                <input type="text" name="Qstatus3" id="Qstatus3" placeholder="true or false">
+                <textarea name="Qreason" id="Qreason" placeholder="ضع شرح السبب"></textarea>
+                <button>إضافة</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="footer">
+        <div class="container">
+            <footer>
+            <div class="col-1">
+                <div class="logo"><a href="/Home">
+                    <img src="image/Logo.png" alt="">
+                </a></div>
+                <p>I'll be very grateful if you share your opinion with me. <br>
+                I hope that this website is usful for you </p>
+            </div>
+            <div class="col-2">
+                <h2 class="column-heading">Important<br>Links</h2>
+                <ul>
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://www.instagram.com/x_codehr_x/">Contact</a></li>
+                <li><a href="#">Topics</a></li>
+                <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h2 class="column-heading">Contact<br>Info</h2>
+                <ul>
+                <li><a href="mailto:hkrock236@gmail.com?subject=Contact">hkrock236@gmail.com</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=1555867970&text=send%20your%20message">01555867970</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h2 class="column-heading">Social<br>Links</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/groups/spaceyouthforum/">FB</a></li>
+                    <li><a href="https://twitter.com/SpaceYouthForum">TW</a></li>
+                    <li><a href="https://www.instagram.com/x_codehr_x/">IG</a></li>
+                </ul>
+            </div>
+            </footer>
+        </div>
+    </section>
+    <section class="copyright">
+        <div class="end-text">
+            <p> &copy; Copyright 2022 Space Youth Forum</p>
+        </div>
+    </section>
+    
+    <!-- Loading page  -->
+    <div id="loadingPage">
+        <div class="space">
+            <div class="f-circle"></div>
+            <div class="s-circle"></div>
+            <div class="t-circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script>
+        let AddingForm = document.getElementById('AddingForm')
+        let userData = JSON.parse(localStorage.getItem('UserData'))
+        let userStatus = userData.Ustatus
+        if (userStatus === 'admin' ) {
+            AddingForm.style.display = 'block'
+        }
+        
+
+         // +++++++++++++ for List Nav +++++++++++++++++
+        
+        function block() {
+            let click = document.getElementById('listLogo')
+            click.onclick = function () {
+                document.getElementById('listUl').classList.toggle('show');
+                document.querySelectorAll('nav span').forEach(span => span.classList.toggle('span'))
+            }
+            document.getElementById('listUl').onclick = function () {
+                document.getElementById('listUl').classList.toggle('show')
+                document.querySelectorAll('nav span').forEach(span => span.classList.toggle('span'))
+            }
+        }
+        
+        // ++++++++++++++++++++ Loading Page ++++++++++++++++++++++++
+        window.onload = () => {
+            let LoadingPage = document.querySelector('#loadingPage')
+        
+            LoadingPage.style.opacity = '1'
+            LoadingPage.style.display = 'flex' 
+            document.body.style.overflow = 'hidden'
+        
+            setTimeout(() => {
+                document.body.style.overflow = 'auto'
+                LoadingPage.style.opacity = '0'        
+            }, 3000);
+        
+            setTimeout(() => {
+                LoadingPage.style.display = 'none'
+            }, 4000);
+        
+        }
+        
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        let copyright = document.querySelector('.copyright .end-text p')
+        
+        let year = new Date()
+        
+        copyright.innerHTML =` &copy; Copyright ${year.getFullYear()} SYF`
+        
+    </script>
+</body>
+</html>

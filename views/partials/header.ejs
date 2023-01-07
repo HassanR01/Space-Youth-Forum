@@ -1,0 +1,256 @@
+
+<style>
+
+/* Start header  */
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+}
+
+.contener {
+    position: relative;
+    width: 100%;
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 73.91px;
+    flex-wrap: wrap;
+    background-color: var(--main-color-5) ;
+    box-shadow: 0 0 5px black !important;
+    margin: auto;
+    transition: var(--main-transition);
+}
+
+.contener .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 60px;
+    margin: 0 10px;
+}
+
+.logo h1 {
+    max-width: 120px;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-family: var(--main-font-3);
+}
+
+.contener .navegation {
+    padding: 0 10px ;
+}
+
+.navegation nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.navegation nav .i {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegation nav .i span {
+    width: 25px;
+    height: 1.8px;
+    background-color: var(--main-color-6);
+    margin: 3px;
+    transition: var(--main-transition);
+}
+
+.navegation nav .i .i1 {
+    width: 12.5px ;
+    direction: rtl;
+}
+
+.navegation nav .i .i3 {
+    width: 12.5px ;
+    text-align: left;
+    direction: ltr;
+}
+
+.navegation nav .span {
+    width: 25px !important;
+}
+
+@media (min-width : 768px) {
+    .navegation nav .i {
+        display: none;
+    }
+}
+
+.navegation nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+
+}
+
+.navegation nav ul li {
+    position: relative ;
+    padding: 25px 0;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+
+.navegation nav ul li::before {
+    content : "" ;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 100%;
+    background-color: var(--main-color-6);
+    transition: var(--main-transition) ;
+}
+
+.navegation nav ul li:hover::before {
+    left: 0;
+    box-shadow: 0 0 10px 5px var(--main-color-6);
+}
+
+.navegation nav ul li a {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    font-family: var(--main-font-1);
+    color: var(--main-color-5);
+    transition: var(--main-transition);
+}
+
+.show {
+    right: -10px !important;
+}
+
+@media (max-width : 767px) {
+    .navegation nav ul {
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        top: 48px ;
+        right: -300px;
+        background-color: #000742d0;
+        transform: var(--main-transition);
+        box-shadow: 0 20px 80px black;
+    }
+
+    .navegation nav ul li a {
+        color: var(--main-color-6);
+    }
+
+    .contener .logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        margin: 5px 0 10px 0;
+    }
+    .logo img {
+        width: 50px;
+    }
+    .logo h1 {
+        font-size: 2rem;
+        max-width: 700px;
+    }
+}
+
+@media (max-width : 400px) {
+    .logo img {
+        width: 50px;
+    }
+    .logo h1 {
+        font-size: 1.2rem;
+        max-width: 700px;
+    }
+}
+
+@keyframes up-down {
+    100%,
+    0% {
+        margin: 0 0;
+    }
+
+    50% {
+        margin: 20px 0;
+    }
+}
+</style>
+
+<header>
+    <div class="contener">
+        <div class="logo">
+            <a href="#"><img src="../image/Logo.png" alt="logo"></a>
+            <h1 class="title-h1">Space Youth Forum</h1>
+        </div>
+        <div class="navegation">
+            <nav>
+                <div class="i" id="listLogo" onclick="block()">
+                    <span class="i1"></span>
+                    <span class="i2"></span>
+                    <span class="i3"></span>
+                </div>
+                <ul id="listUl" >
+                    <li><a href="/Home">الرئيسة</a></li>
+                    <li><a href="/challenges">التحديات</a></li>
+                    <li><a href="/Events">الأحداث</a></li>
+                    <li><a href="/Topics">المواضيع</a></li>
+                    <li><a href="/Top">المتصدرين</a></li>
+                    <li><a Id="LoginLink" href="/Home">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    if (localStorage.getItem('UserData')) {
+        let Userdata = JSON.parse(localStorage.getItem('UserData'))
+        let userId = Userdata.id
+        document.getElementById('LoginLink').innerHTML = ` <a onclick="" href="/profile/${userId}">ملفك الشخصي</a> `
+    } else {    
+        
+        // ++++++++++++++++++++++++ Log In ++++++++++++++++++++++++++
+    
+        document.getElementById('LoginLink').addEventListener('click' , () => {
+            let FormsCards = document.getElementById('Forms')
+            FormsCards.style.display = 'flex'
+            setTimeout(() => {
+                FormsCards.style.opacity = '1'
+            } , 20)
+        })
+                        
+        function ShouldSign(Mess) {
+            alert(Mess)
+        }
+    }
+    
+
+    function block() {
+            let click = document.getElementById('listLogo')
+            click.onclick = function () {
+                document.getElementById('listUl').classList.toggle('show');
+                document.querySelectorAll('nav span').forEach(span => span.classList.toggle('span'))
+            }
+            document.getElementById('listUl').onclick = function () {
+                document.getElementById('listUl').classList.toggle('show')
+                document.querySelectorAll('nav span').forEach(span => span.classList.toggle('span'))
+            }
+        }
+
+
+</script>

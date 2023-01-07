@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <meta name="keywords" content="Hassan , HTML , CSS , JavaScript , space , astronomy , Space Youth Forum , HR , Nasa Egypt , Nasa , Space Egyption Agency , اتحاد شباب الفضاء , علم الفلك , الفضاء , عجائب الفضاء">
+    <meta name="auther" content="Hassan Space Youth Forum">
+    <meta name="theme-color" content="#26b0ff">
+    <meta name="robots" content="index,follow">
+    
+    <!-- Css Files  -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="top.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <!-- Logo for the website -->
+    <link rel="icon" href="image/logo.ico">
+    <link rel="apple-touch-icon" href="image/logo.ico">
+    <link rel="apple-touch-icon-precomposed" href="image/logo.ico">
+    <link rel="shortcut icon" href="image/logo.ico">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/fa3c9a78d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font Links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Cinzel+Decorative:wght@400;700&family=Markazi+Text&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Markazi+Text&display=swap" rel="stylesheet">
+
+    <title>Leaderboard</title>
+</head>
+<body>
+
+    <!-- Start header  -->
+    <%- include('partials/header')  %> 
+    <!-- End header -->
+        
+
+    <div class="yourRate">
+        <div id="details" class="details"></div>
+        <div class="rateLine">
+            <div id="rateP" class="rateP"></div>
+        </div>
+        <p id="level"></p>
+    </div>
+
+    <div class="leaderboards">
+        <h1>المتصدرين</h1>
+        <% for( let i = 0; i < Users.length; i++ ) { %>
+            <div class="leaderboard">
+                <div class="userName">
+                    <p><%= i + 1 %></p>
+                    <h3><%= Users[i].userName %></h3>
+                </div>
+                <div class="userPoint">
+                    <p><%= Users[i].points %> </p>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+    <script>
+        let userRate = document.getElementById('details')
+        let rateP = document.getElementById('rateP')
+        let level = document.getElementById('level')
+        if (localStorage.getItem('UserData')) {
+            let Userdata = JSON.parse(localStorage.getItem('UserData'))
+            let userName = Userdata.userName
+            let userPoints = Userdata.points
+            let userGender = Userdata.gender
+            if (userGender === 'male') {
+                userRate.innerHTML = `<p>${userPoints}</p><img src="../image/men.png" data-genral="man"><h5>${userName}</h5>`
+                window.onload = () => {
+
+                    setTimeout(() => {
+                        if (userPoints >= 100) {
+                            rateP.style.width = `${(userPoints/200) * 100}%`
+                            level.innerHTML = `المستوى الثاني`
+                        } else {
+                            rateP.style.width = `${(userPoints/100) * 100}%`
+                            level.innerHTML = `المستوى الأول`
+                        }
+                    }, 500);
+                }
+            } else {
+                userRate.innerHTML = `<p>${userPoints}</p><img src="../image/women.png" data-genral="woman"><h5>${userName}</h5>`
+                window.onload = () => {
+
+                    setTimeout(() => {
+                        if (userPoints >= 100) {
+                            rateP.style.width = `${(userPoints/200) * 100}%`
+                            level.innerHTML = `المستوى الثاني`
+                        } else {
+                            rateP.style.width = `${(userPoints/100) * 100}%`
+                            level.innerHTML = `المستوى الأول`
+                        }
+                    }, 500);
+                }
+            }
+        } else {
+            userRate.innerHTML = ''
+        }
+
+    </script>
+</body>
+</html>

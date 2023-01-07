@@ -1,0 +1,154 @@
+#loadingPage{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 100%;
+	height:100vh;
+  background: linear-gradient(180deg, var(--main-color-2) 20%, #016cf2);
+	transition: 1s;
+	opacity: 1;
+}
+
+.space{
+  width: 300px;
+  height:300px;  
+  position:relative;
+  background: rgb(0,15,88);
+  background: radial-gradient(circle, rgba(0,15,88,1) 22%, rgba(0,3,170,0) 69%);
+}
+
+.circle{
+  width:80px;
+  height:80px;
+  background-color:#f0e00a;
+  border:1px solid transparent;
+  border-radius:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50% , -50%);
+  transition:1s;
+}
+
+.f-circle{
+  position:absolute;
+  width:95%;
+  height:95%;
+  left:2.5%;
+  top:2.5%;
+  border-radius:50%;
+  border:1px solid #ccc;
+  animation: rotate 2s linear 0s infinite;
+}
+
+.f-circle::after{
+  content:"";
+  display:inline-block;
+  width:30px;
+  height:30px;
+  position:relative;
+  left:60px;
+  border-radius:50%;
+  background-color:#e43a06;
+}
+
+/* second circle */
+.s-circle{
+  width:75%;
+  height:75%;
+  position:absolute;
+  top:calc(50% - 37.5%);
+  left:calc(50% - 37.5%);
+  border:1px solid #ccc;
+  border-radius:50%;
+  animation: rotate 4s linear 0s infinite;
+}
+
+.s-circle::after{
+  content:"";
+  display:inline-block;
+  width:20px;
+  height:20px;
+  position:relative;
+  left:60px;
+  border-radius:50%;
+  background-color:#3064fd;
+}
+
+/* third circle */
+.t-circle{
+  width:55%;
+  height:55%;
+  position:absolute;
+  left:calc(50% - 27.5%);
+  top:calc(50% - 27.5%);
+  border-radius:50%;
+  border:1px solid #ccc;
+  animation: rotate 5s linear 0s infinite;
+}
+
+.t-circle::after{
+  content:"";
+  display:inline-block;
+  width:20px;
+  height:20px;
+  position:relative;
+  left:35px;
+  border-radius:50%;
+  background-color:#553b03;
+}
+
+/* keyframe rotate anmiation */
+@keyFrames rotate{
+  from{
+    transform:rotate(360deg);
+  }
+  to{
+    transform:rotate(0deg);
+  }
+}
+
+
+.circle:hover{
+  width:120px;
+  height:120px;
+}
+
+.f-circle:hover ,
+.s-circle:hover ,
+.t-circle:hover
+{
+  border:2px solid #ccc;
+  padding:-1px;
+}
+
+@media (max-width : 450px) {
+	.space {
+		width: 200px;
+		height: 200px;
+	}
+	.space .circle {
+		width: 40px;
+		height: 40px;
+	}
+	.circle:hover{
+		width:80px;
+		height:80px;
+	}
+
+	.f-circle::after {
+		left: 30px;
+	}
+	.s-circle::after {
+		left: 25px;
+	}
+	.t-circle::after {
+		left: 15px;
+	}
+
+
+}

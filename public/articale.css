@@ -1,0 +1,597 @@
+:root {
+    --white : #ffffff ;
+    --black : #000000 ;
+    --gray : #596164 ;
+    --main-color-1 : #00beff;
+    --main-color-2 : #26b0ff;
+    --main-color-3 : #000080 ;
+    --main-color-4 : #0084ff ;
+    --main-color-5 : #f7f7fb ;
+    --main-color-6 : #B2FFFF ;
+    --main-font-1 : 'Cairo', sans-serif;
+    --main-font-2 :  'Cinzel Decorative', cursive;
+    --main-font-3 :  'Quintessential', cursive;
+    --main-font-4 :  'Markazi Text', serif;
+    --main-transition : 0.5s ease ;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font-1);
+    background: linear-gradient(180deg, var(--main-color-2) 6%, #1381ff);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Start Scroll bar */
+
+::-webkit-scrollbar {
+    width: 5px;
+    /* display: none; */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--black);
+    box-shadow: 0 0 5px var(--white) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-4);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner{
+    background-color: #000000;
+
+}
+
+ul::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+}
+
+ul::-webkit-scrollbar-track {
+    background-color: var(--black);
+    box-shadow: 0 0 5px var(--white) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-2);
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-2);
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-corner{
+    background-color: #000000;
+
+}
+
+
+/* End Scroll bar */
+
+/* Start header  */
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+}
+
+.contener {
+    position: relative;
+    width: 100%;
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color-2) !important;
+    min-height: 73.91px;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px black;
+}
+
+.contener .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70px;
+    margin: 0 10px;
+}
+
+.logo h1 {
+    max-width: 120px;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-family: var(--main-font-3);
+}
+
+.contener .navegation {
+    padding: 0 5px ;
+}
+
+.navegation nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegation nav i {
+    position: relative;
+    font-size: 30px;
+    color: var(--white);
+}
+/* 
+.navegation nav i:hover {
+    animation: up-down 2s infinite ;
+} */
+
+@media (min-width : 768px) {
+    .navegation nav i {
+        display: none;
+    }
+}
+
+.navegation nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+}
+
+.navegation nav ul li {
+    position: relative ;
+    padding: 25px 0;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+
+.navegation nav ul li::before {
+    content : "" ;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 100%;
+    background-color: var(--main-color-3);
+    transition: var(--main-transition) ;
+}
+
+.navegation nav ul li:hover::before {
+    left: 0;
+    box-shadow: 0 0 20px black;
+}
+
+.navegation nav ul li a {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    font-family: var(--main-font-1);
+    color: var(--main-color-3);
+    transition: var(--main-transition);
+}
+
+.navegation nav ul li:hover .btn{
+    color: var(--white);
+}
+
+.show {
+    right: -10px !important;
+}
+
+@media (max-width : 767px) {
+    .navegation nav ul {
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        top: 52px ;
+        right: -300px;
+        background-color: #000742b0;
+        transform: var(--main-transition);
+        box-shadow: 0 20px 80px black;
+    }
+
+    .navegation nav ul li a {
+        color: var(--main-color-6);
+    }
+
+    .contener .logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        margin: 5px 0 10px 0;
+    }
+    .logo img {
+        width: 50px;
+    }
+    .logo h1 {
+        font-size: 2rem;
+        max-width: 700px;
+    }
+}
+
+@media (max-width : 400px) {
+    .logo img {
+        width: 50px;
+    }
+    .logo h1 {
+        font-size: 1.2rem;
+        max-width: 700px;
+    }
+}
+
+@keyframes up-down {
+    100%,
+    0% {
+        margin: 0 0;
+    }
+
+    50% {
+        margin: 20px 0;
+    }
+}
+/* End header */
+
+/* Start contener Read */
+
+.contenerRead {
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.contenerRead .image {
+    position: relative;
+    width: 100%;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contenerRead .image img {
+    width: 100%;
+}
+
+.contenerRead .image .title {
+    position: absolute;
+    top:50%;
+    transform: translate(0 , -50%);
+    z-index: 1;
+    width: 100%;
+    background-color: #f7f7fb69;
+    text-align: center;
+}
+
+.contenerRead .image .title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contenerRead .image .title .writing {
+    margin:0 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenerRead .image .title .writing p {
+    margin: 0 10px;
+}
+
+/* Start articale */
+
+.contenerRead .articale {
+    width: 100%;
+    padding: 50px 10px;
+    background-color: #00010536;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenerRead .articale .head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--main-color-5);
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--main-color-5);
+    text-align: center;
+}
+
+
+
+.contenerRead .articale .text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenerRead .articale .text .textCon {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenerRead .articale .text .textCon h1, 
+.contenerRead .articale .text .textCon h2, 
+.contenerRead .articale .text .textCon h3, 
+.contenerRead .articale .text .textCon h4, 
+.contenerRead .articale .text .textCon h5, 
+.contenerRead .articale .text .textCon h6 {
+    color: #B2FFFF;
+    margin: 0 0 20px 0;
+    font-family: var(--main-font-4);
+    font-size: 2rem;
+}
+
+.contenerRead .articale .text .textCon p {
+    line-height: 1.8;
+    color: var(--main-color-5);
+}
+.contenerRead .articale .text .textCon a {
+    color: #0011ff;
+
+}
+
+.contenerRead .articale .text .textCon ul {
+    list-style: none;
+    margin: 10px 0 20px 0;
+}
+
+.contenerRead .articale .text .textCon ul li{
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--main-color-5);
+}
+
+@media (max-width : 767px) {
+    .contenerRead .image .title h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* End contener Read */
+
+
+
+
+
+
+
+
+
+
+
+/* check Readed */
+
+.checkReaded {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    direction: rtl;
+}
+
+.checkReaded h6 {
+    font-size: 1.5rem;
+    color: var(--main-color-3);
+}
+
+.checkReaded form {
+    padding: 10px ;
+}
+
+.checkReaded form input[type="checkbox"] {
+    display: none;
+}
+
+.checkReaded form button {
+    width: 100px;
+    font-size: 1.2rem;
+    font-family: var(--main-font-4);
+    color: var(--main-color-5);
+    font-weight: bold;
+    border: none;
+    border: 2px solid var(--main-color-5);
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #0000ca;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.checkReaded form button:hover {
+    background-color: var(--main-color-3);
+    box-shadow: 0 0 10px var(--main-color-5);
+}
+
+/* Share content */
+
+.Share {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    direction: rtl;
+}
+
+.Share .text h6 {
+    font-size: 1.7rem;
+    font-family: var(--main-font-1);
+    color: #000080;
+}
+
+.Share .clicking {
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.Share .clicking .bot {
+    display: flex ;
+    margin: 10px;
+    justify-content: space-around;
+    padding: 5px ;
+    border-radius: 10px;
+    border : 2px solid var(--main-color-5) ;
+    box-shadow: 0 0 3px black;
+    transition: var(--main-transition);
+}
+
+.Share .clicking .bot:hover {
+    box-shadow: 0 0 10px var(--main-color-5);
+}
+
+.Share .clicking .fbC {
+    background-color: #4080ff;
+}
+
+.Share .clicking .twC {
+    background-color: #1d9bf0;
+}
+
+.Share .clicking .bot i {
+    color: var(--main-color-6) ;
+    display: inline;
+    padding: 5px;
+    font-size: 1.4rem;
+    border-right: 2px solid var(--main-color-5);
+}
+
+.Share .clicking .bot h5 {
+    display: inline;
+    margin: 5px;
+    font-size: 1.4rem;
+    font-family: var(--main-font-3);
+}
+
+
+@media (max-width : 767px) {
+    .Share .text h6 {
+        font-size: 1.6rem;
+    }
+    .Share .clicking {
+        width : auto;
+    }
+    .Share .clicking .bot i {
+        font-size: 1.2rem;
+    }
+    .Share .clicking .bot h5 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width : 400px) {
+    .Share .text h6 {
+        font-size: 1.2rem;
+    }
+    .Share .clicking {
+        width : auto;
+    }
+    .Share .clicking .bot i {
+        font-size: 1rem;
+    }
+    .Share .clicking .bot h5 {
+        font-size: 1rem;
+    }
+}
+
+/* Ads conter  */
+
+.ads-conter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ads-conter h6 {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-family: var(--main-font-1);
+    color: var(--main-color-3);
+    text-align: center;
+}
+
+.ads-conter fieldset {
+    width: 95%;
+    height: 100px;
+    margin: 20px 0;
+}
+
+
+/* Copyright */
+
+
+.copyright {
+    width: 100%;
+    height: 40px;
+    background-color: #040b1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.copyright .end-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright .end-text p{
+    font-size: 1.2rem;
+    color: var(--white);
+}

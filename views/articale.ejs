@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="keywords" content="<%= dataA.articale.Aword %> ">
+    <meta name="description" content="<%= dataA.articale.Adescription %>">
+    <meta name="auther" content="Space Youth Forum منتدى شباب الفضاء">
+    <meta name="theme-color" content="#26b0ff">
+    <meta name="robots" content="index,follow">
+
+    <!-- End SEO -->
+    <meta property="og:site_name" content="<%= dataA.articale.Ahead%>"/>
+    <meta property="og:title" content="<%= dataA.title.Atitle%>" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:description" content="<%= dataA.articale.Adescription %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../image/<%= dataA.title.Afile %> " />
+    
+    <!-- Css Files  -->
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../articale.css">
+    <link rel="stylesheet" href="../animation.css">
+
+    <!-- Logo for the website -->
+    <link rel="icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon-precomposed" href="../image/logo.ico">
+    <link rel="shortcut icon" href="../image/logo.ico">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/fa3c9a78d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font Links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Cinzel+Decorative:wght@400;700&family=Markazi+Text&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <title><%= dataA.title.Atitle %></title>
+</head>
+<body>
+    
+    <!-- Start header  -->
+    <%- include('partials/header')  %> 
+    <!-- End header -->
+
+    <div class="contenerRead">
+        <div class="image">
+            <img src="<%= dataA.title.Afile %>" alt="<%= dataA.title.Ahead %>">
+            <div class="title">
+                <h1><%= dataA.title.Atitle %></h1>
+                <div class="writing">
+                    <p>بقلم / <%= dataA.title.Awriter%></p>
+                    <p><%= dataA.title.Adate %></p>
+                </div>
+            </div>            
+        </div>
+        <div class="articale">
+            <div class="head">
+                <h3><%= dataA.articale.Ahead %></h3>
+            </div>
+            <div class="text">
+                <div class="textCon" id="text" data-value='<%= dataA.articale.Atext %>'></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="checkReaded">
+        <h6>هل أتممت قراءة المقال</h6>
+        <form method="post" id="Creading" action="/Topics/<%= dataA.id %> ">
+            <input type="checkbox" name="articalName" value="<%= dataA.title.Atitle %> " checked>
+            <input type="checkbox" name="userID" id="checking" checked>
+            <button>نعم</button>
+        </form>
+    </div>
+
+    <div class="Share">
+        <div class="text">
+            <h6>مشاركة المقال</h6>
+        </div>
+        <div class="clicking">
+            <div class="fbC bot"><a href="#shareFacebook" onclick="shareFacebook('https://www.facebook.com/sharer/sharer.php?u=https://space-youth-forum.herokuapp.com/Topics/<%= dataA.id %>')"><i class="fa-brands fa-facebook-f"></i><h5>Facebook</h5></a></div>
+            <div class="twC bot"><a href="#shareTwitter" onclick="shareTwitter('http://www.twitter.com/share?url=https://space-youth-forum.herokuapp.com/Topics/<%= dataA.id %>')"><i class="fa-brands fa-twitter"></i><h5>Twitter</h5></a></div>
+        </div>
+    </div>
+
+    <div class="ads-conter">
+        <hr>
+        <h6>أعلان</h6>
+        <fieldset>
+            
+        </fieldset>
+        <hr>
+    </div>
+
+    <section class="copyright">
+        <div class="end-text">
+            <p> &copy; Copyright 2022 Space Youth Forum</p>
+        </div>
+    </section>
+    
+    <!-- Loading page  -->
+    <div id="loadingPage">
+        <div class="space">
+            <div class="f-circle"></div>
+            <div class="s-circle"></div>
+            <div class="t-circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        if (localStorage.getItem("UserData")) {
+            let userData = JSON.parse(localStorage.getItem('UserData'))
+            let userid = userData.id
+            document.getElementById('Creading').onsubmit = () => {
+                let checking = document.getElementById('checking')
+                checking.setAttribute('value' , userid)
+    
+                return true
+            }
+        } else {
+            document.getElementById('Creading').onsubmit = () => {
+                return false
+            }
+        }
+
+        
+        let lis = document.querySelectorAll('ul li')
+
+        lis.forEach((li) => {
+            li.addEventListener('click' , function () {
+                window.localStorage.setItem('planets' , li.dataset.astronaut)
+                let Allcontent = document.querySelectorAll('.content')
+                Allcontent.forEach((content) => {
+                    content.classList.remove('active')
+                })
+                document.getElementById(li.dataset.astronaut).classList.add('active')
+            })
+        })
+
+        // +++++++++++++++++ For list Nav +++++++++++++++++
+
+        function block() {
+            let click = document.getElementById('listLogo')
+            click.onclick = function () {
+                document.getElementById('listUl').classList.toggle('show');
+            };
+
+            document.getElementById('listUl').onclick = function () {
+                document.getElementById('listUl').classList.toggle('show')
+            }
+        }
+
+        // ++++++++++++++++++++ Loading Page ++++++++++++++++++++++++
+        window.onload = () => {
+            let LoadingPage = document.querySelector('#loadingPage')
+
+            LoadingPage.style.opacity = '1'
+            LoadingPage.style.display = 'flex' 
+            document.body.style.overflow = 'hidden'
+
+            setTimeout(() => {
+                document.body.style.overflow = 'auto'
+                LoadingPage.style.opacity = '0'        
+            }, 3000);
+
+            setTimeout(() => {
+                LoadingPage.style.display = 'none'
+            }, 4000);
+
+        }
+
+
+        // Sharing Links social media
+
+        function shareFacebook(href) {
+            window.open(href , 'fbwin' , 'left=20 , top=10 , width=300 , height=600 , resizable=0')
+        }
+        function shareTwitter(href) {
+            window.open(href , 'fbwin' , 'left=20 , top=10 , width=300 , height=600 , resizable=0')
+        }
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        let copyright = document.querySelector('.copyright .end-text p')
+
+        let year = new Date()
+
+        copyright.innerHTML =` &copy; Copyright ${year.getFullYear()} SYF`
+
+        let any = document.getElementById('text')
+        let text = any.getAttribute('data-value')
+        console.log(text)
+        any.innerHTML = text
+    </script>
+</body>
+</html>

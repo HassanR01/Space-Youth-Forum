@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO  -->
+    <meta name="Description" content="Space Youth Forum | المجموعة الشمسية هى نظام نجمى قائم على نجم واحد يدور حوله اجرام سموية متنوعة و اكبرها الكواكب ">
+    <meta name="keywords" content=" المجموعة الشمسية , النظام الشمسى , النجوم , الكواكب , الطواكب الداخلية , الكواكب الخارجية , solar-system">
+    <meta name="auther" content="Space Youth Forum منتدى شباب الفضاء">
+    <meta name="theme-color" content="#26b0ff">
+    <meta name="robots" content="index,follow">
+
+    <!-- End SEO -->
+    <meta property="og:site_name" content="المجموعة الشمسية كما لم تراه من قبل"/>
+    <meta property="og:title" content="المجموعة الشمسية" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:description" content="المجموعة الشمسية هى نظام نجمى قائم على نجم واحد يدور حوله أجرام سموية متنوعة و أكبرها الكواكب وسوف نتعرف عليها كما لم نعرفها من قبل" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../image/sun.png" />
+    
+    <!-- Css Files  -->
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../Topics.css">
+    <link rel="stylesheet" href="../animation.css">
+
+    <!-- Logo for the website -->
+    <link rel="icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon" href="../image/logo.ico">
+    <link rel="apple-touch-icon-precomposed" href="../image/logo.ico">
+    <link rel="shortcut icon" href="../image/logo.ico">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/fa3c9a78d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/all.min.css">
+
+    <!-- Font Links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Cinzel+Decorative:wght@400;700&family=Markazi+Text&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>Solar-system</title>
+</head>
+<body>
+
+    <!-- Start header  -->
+    <%- include('partials/header')  %> 
+    <!-- End header -->
+    
+    <div class="SSplanets">
+        <div class="overlay">
+            <h3>كواكب المجموعة الشمسية</h3>
+
+            <ul>
+                <li data-planet="mercury">عطارد</li>
+                <li data-planet="venus">زهرة</li>
+                <li data-planet="earth">الارض</li>
+                <li data-planet="mars">المريخ</li>
+                <li data-planet="jupiter">المشترى</li>
+                <li data-planet="saturn">زحل</li>
+                <li data-planet="uranus">أورانوس</li>
+                <li data-planet="neptune">نبتون</li>
+            </ul>
+    
+            <div class="box-content">
+                <!-- mercury -->
+                <div id="mercury" class="content active">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب عطارد ؟</h4>
+                        <img src="../image/mercury.png" alt="عطارد">
+                    </div>
+                    <div class="topic">
+                        <h4>أصغر كواكب المجموعة الشمسية</h4>
+                        <p>أحد أكثر الكواكب كثافة وأصغرها، كما أنه من الصعب رؤيته ومراقبته من الأرض ، و لا يمتلك اقماراً .
+                            <br>
+                            يعد الغلاف الجوي ضعيفًا ويكاد يكون غير موجود، يحتوي على العناصر الآتية؛ الأكسجين والصوديوم والهيدروجين والهيليوم والبوتاسيوم .
+                            لا يمتص الغلاف أي حرارة من الشمس ؛ حيث ان السبب في ارتفاع درجة حرارته يكمن في قربه من الشمس بينما الجزء الاخر من الكوكب تصل درجة حرارته الى -170 درجة مئوية .
+                            طول قطر الكوكب 4879.4 Km . <br>
+                            و سرعه دورانه حول محورة بطيئة للغاية حيث ان طول اليوم الواحد على كوكب عطارد يعادل 58.6 يوم ارضى . <br>
+                            و سرعة دورانه حول الشمس سريعة بحيث ان العام يعادل 87.9 يوم ارضى
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>مارينا 10</p>
+                                <span></span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>57.9 مليون</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- venus -->
+                <div id="venus" class="content">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب زهرة ؟</h4>
+                        <img src="../image/venus.png" alt="زهرة">
+                    </div>
+                    <div class="topic">
+                        <h4>تؤام الارض</h4>
+                        <p>الغلاف الجوي للكوكب سام وسميك، كما يتكون على نحو أساسي من أول أكسيد الكربون الذي يقوم بحبس الحرارة، الأمر الذي يجعله أكثر كواكب المجموعة الشمسية سخونة ، كما انه لا يمتلك اقماراً تدور حوله .<br>
+                            يتكون غلافه الجوي من غاز ثاني أكسيد الكربون بشكل أساسي ، إضافة لكميات بسيطة من النيتروجين ، النيون ، الهيليوم و الارجون . <br>
+                            طول قطر الكوكب 12,104 Km . <br>
+                            يدور في اتجاه معاكس للكواكب الأخرى، ويكون الدوران بشكلٍ بطيء؛ إذ ان اليوم الواحد على كوكب الزهرة يعادل 243 يومًا أرضيًا، ويستغرق دورانه حول الشمس 225 يومًا.
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>فينوس اكسبريس اوربيتر</p>
+                                <span></span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>108.2 مليون</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- earth -->
+                <div id="earth" class="content">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب الارض ؟</h4>
+                        <img src="../image/earth-globe.png" alt="الارض">
+                    </div>
+                    <div class="topic">
+                        <h4>كوكب الحياة</h4>
+                        <p>يتسم بأنه الكوكب الوحيد الذى يصلح للحياة و له قمر واحد . <br> 
+                            يتكون غلافة الجوي من الاكسجين و النيتروجين بشكل أساسي ، إضافة الى عددٍ من الغازات الثانوية و هي الهيليوم ، ثاني أكسيد  الكربون ، الارجون و الأوزون . <br>
+                            الأرض ليست كروية تماماً ، ف الكوكب يتفلطح عند خط الاستواء بنسبة 0.3% كنتيجة لحقيقة دورانه حول محوره ، طول قطر الأرض من الشمال الى الجنوب 12714 Km بينما طول قطر الأرض عند خط الاستواء 12756 Km .
+                            يدور الكوكب مرة واحدة يوميًا حول المحور . <br>
+                            يدور الكوكب حول الشمس مرة واحدة كل 365.24 يومًا؛ وتعرف هذه الفترة بالسنة . <br>
+                            يدور القمر حول الأرض مرة واحدة كل 29.5 يومًا؛ وتعرف هذه الفترة بالشهر.
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>ـــــــــــــ</p>
+                                <span>ـــــ</span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>149.6 مليون</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mars -->
+                <div id="mars" class="content">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب المريخ ؟</h4>
+                        <img src="../image/mars.png" alt="المريخ">
+                    </div>
+                    <div class="topic">
+                        <h4>الكوكب الاحمر</h4>
+                        <p>يعرف بالكوكب الأحمر بسبب وجود مادة أكسيد الحديد في تربته و تظهر الدراسات علامات قديمة لتدفق المياه السائلة على سطحه، كما يمتلك مجالًا مغناطيسيًا أصغر من الأرض، وأقل كثافة منها .
+                            يمتلك كوكب المريخ قمرين ( فوبوس و ديموس ) . <br>
+                            يتكون الغلاف الجوي من مزيج هش من ثاني أكسيد الكربون والنيتروجين والأرجون و يعرف بأنه رقيق، وتوجد اعتقادات بأن الغلاف الجوي من الممكن أنه كان قويًا في وقت سابق لدعم وجود الماء على سطحه.
+                            طول قطر الكوكب 6,779 Km . <br>
+                            لا يختلف عن الأرض كثيرا في سرعه دورانه حول محوره ؛ حيث ان اليوم يعاد 24 ساعه ، 37 دقيقة على كوكب الأرض ، بينما السنة تعادل 687 يوم ارضى .                            
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>سبريت و ابورتيونتى</p>
+                                <span></span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>227.9 مليون</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- jupiter -->
+                <div id="jupiter" class="content">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب المشترى ؟</h4>
+                        <img src="../image/jupiter.png" alt="المشترى">
+                    </div>
+                    <div class="topic">
+                        <h4>العملاق الغازى</h4>
+                        <p>يمتاز كوكب المُشتري بأنَّه أكبر كوكب في المجموعة الشمسية، وهو عبارة عن كرة ضخمة من الغاز يصل حجمها إلى ما يزيد على حجم الأرض بحوالي 300 مرة .
+                            لذا فإنّ السنة على كوكب المُشتري أطول باثنتي عشرة مرة من السنة الأرضية، بينما يبلغ اليوم على كوكب المشتري حوالي 10 ساعات فقط. <br>
+                            وتدور حول كوكب المشتري عشرات الأقمار . <br>
+                            الغلاف الجوي لكوكب المشترى هو اكبر غلاف جوى في المجموعة الشمسية ، و يتألف اساساً من الهيدروجين الجزيئي و الهيليوم و يحتوى على مواد كيماوية أخرى بكميات صغيرة مثل الميثان و الامونيا و كبريتيد الهيدروجين و الماء . <br>
+                            طول قطر الكوكب 139,822 Km . <br>
+                            و يدور الكوكب حول محوره بسرعه كبيره لحجمه و يمثل اليوم على المشترى 9 ساعات ، 55 دقيقة ارضيه 
+                            و تمثل السنه على كوكب المشترى 12 سنه ارضيه  .
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>yغاليليو اوربيتر</p>
+                                <span></span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>778.6 مليون</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- saturn -->
+                <div id="saturn" class="content">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب زحل ؟</h4>
+                        <img src="../image/saturn.png" alt="">
+                    </div>
+                    <div class="topic">
+                        <h4>زينة المجموعة الشمسية</h4>
+                        <p>سادس كواكب المجموعة الشمسية بعداً عن الشمس ويمكن رؤيته بالعين المجردة و هو ثانى اكبر كواكب المجموعة الشمسية ،
+                            و يتميز بحلقاته السبع الملونة المحيطة به . <br>
+                            و له اكثر من 50 قمر يدور في مداره . <br>
+                            يتكون الغلاف الجوي لزحل في الغالب من جزيئات الهيدروجين ، الهيليوم ، الميثان و الامونيا و يُشتبه في وجود الماء في غلافه الجوي الاعمق . <br>
+                            طول قطر الكوكب 120,536 Km . <br>
+                            طول السنه على الكوكب تعادل 29.46 سنه ارضيه . <br>
+                            و اليوم يعاد 10.66 ساعات ارضيه . <br>
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>فويجار 1</p>
+                                <span></span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>1.429 مليار</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- uranus -->
+                <div id="uranus" class="content">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب أورانوس ؟</h4>
+                        <img src="../image/uranus.png" alt="">
+                    </div>
+                    <div class="topic">
+                        <h4>العملاق الجليدى</h4>
+                        <p>يمتاز كوكب اورانوس بانه يشبه في تركيبه الكيميائي كوكب نبتون و يختلف عن باقي الكواكب في محور دورانه المائل على محور دورانه حول الشمس . <br>
+                            له 20 قمر يدور في مدار حوله . <br>
+                            يتركب الغلاف الجوي لكوكب اورانوس من مركبين اساسين و هما الهيدروجين و الهيليوم ، وكما يحتوى على الميثان بنسبه ضئيلة . <br>
+                            طول قطر الكوكب 51,118 Km . <br>
+                            طول السنه على كوكب اورانوس يعادل 84.01 سنه ارضيه . <br>
+                            دوره الكوكب حول نفسه دوره كامله ( اليوم ) تعادل 17.24 ساعة ارضيه . <br>
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>فويجار 2</p>
+                                <span></span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>2.871 مليار</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- neptune -->
+                <div id="neptune" class="content">
+                    <div class="image">
+                        <h4>ماذا تعرف عن كوكب نبتون ؟</h4>
+                        <img src="../image/neptune.png" alt="">
+                    </div>
+                    <div class="topic">
+                        <h4>الكوكب الازرق</h4>
+                        <p>أبعد الكواكب عن الشمس، وهو كوكب عملاق جليدي بارد ومُظلم، وتصل سرعة الرياح فيه أسرع من سرعة الصوت ونظراً لبُعدِه عن الشمس فإنّ درجات الحرارة تصل إلى 255- درجة مئوية، ويمتاز بلونه الأزرق والأخضر ؛ بسبب وجود غاز الميثان في غلافه الجويّ، ويتكون غلافه الجوي بشكل أساسي من الهيدروجين، والهيليوم، والميثان . <br>
+                            له 14 قمرا يدور في مدار حوله . <br>
+                            يبعد عن الشمس مسافه 4,497 مليار Km . <br>
+                            طول السنه على كوكب نبتون تعادل 165 سنه ارضيه . <br>
+                            يمتد اليوم الى 16.11 ساعة أرضية .
+                            </p>
+                        <hr>
+                        <div class="analysis">
+                            <div class="visitors">
+                                <h6>وصلت اليه المركبه</h6>
+                                <p>فويجار 2</p>
+                                <span></span>
+                            </div>
+                            <div class="distance">
+                                <h6>البعد عن الشمس</h6>
+                                <p>4.504 مليار</p>
+                                <span>Km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="checkReaded">
+                <h6>هل أتممت قراءة المقال</h6>
+                <form method="post" id="Creading" action="/read">
+                    <input type="checkbox" name="articalName" value="المجموعة الشمسية" checked>
+                    <input type="checkbox" name="userID" id="checking" checked>
+                    <button>نعم</button>
+                </form>
+            </div>
+
+            <div class="Share">
+                <div class="text">
+                    <h6 style="color : var(--main-color-6)">مشاركة المقال</h6>
+                </div>
+                <div class="clicking">
+                    <div class="fbC bot"><a href="#shareFacebook" onclick="shareFacebook('https://www.facebook.com/sharer/sharer.php?u=https://space-youth-forum.herokuapp.com/Topics/Solar-system')"><i class="fa-brands fa-facebook-f"></i><h5>Facebook</h5></a></div>
+                    <div class="twC bot"><a href="#shareTwitter" onclick="shareTwitter('http://www.twitter.com/share?url=https://space-youth-forum.herokuapp.com/Topics/Solar-system')"><i class="fa-brands fa-twitter"></i><h5>Twitter</h5></a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="copyright">
+        <div class="end-text">
+            <p> &copy; Copyright 2022 Space Youth Forum</p>
+        </div>
+    </section>
+
+    
+    <!-- Loading page  -->
+    <div id="loadingPage">
+        <div class="space">
+            <div class="f-circle"></div>
+            <div class="s-circle"></div>
+            <div class="t-circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script>
+
+        if (localStorage.getItem("UserData")) {
+            let userData = JSON.parse(localStorage.getItem('UserData'))
+            let userid = userData.id
+            document.getElementById('Creading').onsubmit = () => {
+                let checking = document.getElementById('checking')
+                checking.setAttribute('value' , userid)
+    
+                return true
+            }
+        } else {
+            document.getElementById('Creading').onsubmit = () => {
+                return false
+            }
+        }
+
+        let lis = document.querySelectorAll('ul li')
+
+        lis.forEach((li) => {
+            li.addEventListener('click' , function () {
+                window.localStorage.setItem('planets' , li.dataset.planet)
+                let Allcontent = document.querySelectorAll('.content')
+                Allcontent.forEach((content) => {
+                    content.classList.remove('active')
+                })
+                document.getElementById(li.dataset.planet).classList.add('active')
+            })
+        })
+
+        // +++++++++++++++++ For list Nav +++++++++++++++++
+
+        function block() {
+            let click = document.getElementById('listLogo')
+            click.onclick = function () {
+                document.getElementById('listUl').classList.toggle('show');
+            };
+
+            document.getElementById('listUl').onclick = function () {
+                document.getElementById('listUl').classList.toggle('show')
+            }
+        }
+
+        // ++++++++++++++++++++ Loading Page ++++++++++++++++++++++++
+        window.onload = () => {
+            let LoadingPage = document.querySelector('#loadingPage')
+
+            LoadingPage.style.opacity = '1'
+            LoadingPage.style.display = 'flex' 
+            document.body.style.overflow = 'hidden'
+
+            setTimeout(() => {
+                document.body.style.overflow = 'auto'
+                LoadingPage.style.opacity = '0'        
+            }, 3000);
+
+            setTimeout(() => {
+                LoadingPage.style.display = 'none'
+            }, 4000);
+
+        }
+
+
+        // Sharing Links social media
+
+        function shareFacebook(href) {
+            window.open(href , 'fbwin' , 'left=20 , top=10 , width=300 , height=600 , resizable=0')
+        }
+        function shareTwitter(href) {
+            window.open(href , 'fbwin' , 'left=20 , top=10 , width=300 , height=600 , resizable=0')
+        }
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        let copyright = document.querySelector('.copyright .end-text p')
+
+        let year = new Date()
+
+        copyright.innerHTML =` &copy; Copyright ${year.getFullYear()} SYF`
+
+    </script>
+</body>
+</html>

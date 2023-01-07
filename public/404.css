@@ -1,0 +1,43 @@
+#loadingPage{
+    background: linear-gradient(180deg, rgb(5, 0, 54) 20%, #016cf2) !important;
+	transition: 1s;
+    opacity: 1 !important;
+
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background-image: url(../Image/white-stars.png);
+    background-size: cover;
+}
+
+#moon {
+    z-index: 10;
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 3rem;
+    font-family:'Quintessential', cursive;
+    margin: 10px ;
+}
+
+p {
+    text-align: center;
+    line-height: 1.5;
+    color: aqua;
+    font-family: 'Cairo', sans-serif;
+}
+
+a {
+    display: block;
+    color: rgb(0, 153, 255);
+}
