@@ -92,13 +92,19 @@
                 window.onload = () => {
 
                     setTimeout(() => {
-                        if (userPoints >= 100) {
+                        if (userPoints >= 300) {
+                            rateP.style.width = `${(userPoints/400) * 100}%`
+                            level.innerHTML = `المستوى الرابع`
+                        } else if (userPoints >= 200) {
+                            rateP.style.width = `${(userPoints/300) * 100}%`
+                            level.innerHTML = `المستوى الثالث`
+                        } else if (userPoints >= 100) {
                             rateP.style.width = `${(userPoints/200) * 100}%`
                             level.innerHTML = `المستوى الثاني`
                         } else {
                             rateP.style.width = `${(userPoints/100) * 100}%`
                             level.innerHTML = `المستوى الأول`
-                        }
+                        } 
                     }, 500);
                 }
             }
