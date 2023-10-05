@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Aref+Ruqaa&family=Cinzel+Decorative:wght@400;700&family=Markazi+Text&family=Quintessential&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <title>Events</title>
+    <title>Space Mission</title>
 </head>
 
 <body>
@@ -63,106 +63,6 @@
     </header>
     <!-- End header -->
 
-
-    <!-- landing-Event -->
-    <div class="section-view">
-        <div class="title">
-            <h2>Events</h2>
-            <p>هل تريد الذهاب فى رحلة استكشافية فى الفضاء الخارجي ؟</p>
-        </div>
-         <div class="details">
-             <div class="detail">
-                <h3>وجودك فى هذا المكان يدل على</h3>
-                <h3>أهتمامك بتفاصيل منتدى شباب الفضاء</h3>
-                <p>لذلك تقوم الآن شركة <span>Rockai<span>Dev</span></span> بتطوير محاكي <span>Rock Space</span></p>
-                <p>لمساعدتك على الاستكشاف و كشف التفاصيل العميقة داخل الكون</p>
-                <ul>
-                    <h5>مميزات المشروع</h5>
-                    <ol>1- أستكشاف الكواكب و الكويكبات الجديدة</ol>
-                    <ol>2- ملاحظة الاحداث الغير معتادة و تفسيرها</ol>
-                    <ol>3- دراسة سطح الكواكب الجديدة عبر الأشعة الخارجة من المركبات الفضائية</ol>
-                    <ol>4- التنبؤء بمدى قابلية الكوكب لحياة الانسان عليه و التعايش عبر الاحصائيات الناتجة من تطوير الذكاء الاصطناعي</ol>
-                </ul>
-                <p>يمكنك دعم المشروع عبر مشاركة الموقع على صفحات التواصل الاجتماعي و المشاركة فى الصفحة الخاصة على الفيسبوك</p>
-             </div>
-             <div class="web">
-                <img src="image/rockaidev.png" alt="">
-                <div class="title-web">
-                    <h4>Rockai Dev</h4>
-                    <p>شركة ناشئة فى مجال البرمجة بكافة مجالاتها التقنية و الأقتصادية</p>
-                    <ul>
-                        <li><a href="https://www.facebook.com/sharer.php?u=https://rockaidev.web.app" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/intent/tweet?url=https://rockaidev.web.app&text=suggest%20you%20visit%20this%20website&via=" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://www.linkedin.com/shareArticle?url=https://rockaidev.web.app&title=suggest%20you%20visit%20this%20website" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-             </div>
-         </div>
-    </div>
-
-
-    
-    <!-- Start Conter-Event -->
-    
-    <!-- Start Conter-Event -->
-
-
-
-    <!-- Ads -->
-    <hr>
-    <div class="Ads">
-        <h5>Ads</h5>
-        <fieldset>
-
-        </fieldset>
-    </div>
-    <hr>
-
-
-
-    <section id="footer">
-        <div class="container">
-            <footer>
-            <div class="col-1">
-                <div class="logo"><a href="https://space-youth-forum.herokuapp.com">
-                    <img src="image/Logo.png" alt="">
-                </a></div>
-                <p>I'll be very grateful if you share your opinion with me. <br>
-                I hope that this website is usful for you </p>
-            </div>
-            <div class="col-2">
-                <h2 class="column-heading">Important<br>Links</h2>
-                <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="https://ask-me-ques.herokuapp.com">Contact</a></li>
-                <li><a href="/Events">Events</a></li>
-                <li><a href="/Challenges">Challenges</a></li>
-                <li><a href="/Topics">Topics</a></li>
-                </ul>
-            </div>
-            <div class="col-3">
-                <h2 class="column-heading">Contact<br>Info</h2>
-                <ul>
-                <li><a href="mailto:hkrock236@gmail.com?subject=Contact">hkrock236@gmail.com</a></li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h2 class="column-heading">Social<br>Links</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/groups/spaceyouthforum/">FB</a></li>
-                    <li><a href="https://twitter.com/SpaceYouthForum">TW</a></li>
-                    <li><a href="https://www.instagram.com/x_codehr_x/">IG</a></li>
-                </ul>
-            </div>
-            </footer>
-        </div>
-    </section>
-    <section class="copyright">
-        <div class="end-text">
-            <p> &copy; Copyright 2022 Space Youth Forum</p>
-        </div>
-    </section>
-
     <!-- Loading page  -->
     <div id="loadingPage">
         <div class="space">
@@ -172,6 +72,206 @@
             <div class="circle"></div>
         </div>
     </div>
+
+    <script type="module">
+        import * as THREE from 'https://threejs.org/build/three.module.js';
+
+        // Constants
+        const SUN_RADIUS = 3.0;
+        const PLANET_RADIUS = [0.4, 0.9, 1.0, 1.05, 2, 1.5, 1.3];
+        const PLANET_DISTANCE = [5, 8, 11, 16, 26, 32, 38];
+        const PLANET_PERIOD = [0.24, 0.62, 1.0, 1.88, 11.86, 29.46, 84.07];
+        const PLANET_SMA = [2.5, 5.0, 7.5, 10.0, 15.0, 20.0, 25.0]; // Semi-Major Axis
+        const PLANET_ECC = [0.1, 0.2, 0.01, 0.1, 0.05, 0.1, 0.3]; // Eccentricity
+        const PLANET_INC = [5, 10, 0, 7, 1, 2, 3]; // Inclination
+        const PLANET_COLORS = [
+            0xFDB813, // Mercury
+            0xE5E5E5, // Venus
+            0x007BFF, // Earth
+            0xE57E13, // Mars
+            0xE5D6AA, // Jupiter
+            0xE5E5E5, // Saturn
+            0x66A1D2  // Uranus
+        ];
+
+        // Set up scene
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+        camera.position.z = 160;
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Generate star positions
+        const numStars = 1000;
+        const starPositions = Array.from({ length: numStars }, () => new THREE.Vector3(
+            Math.random() * 200 - 100,
+            Math.random() * 200 - 100,
+            Math.random() * 200 - 100
+        ));
+
+        // Function to draw stars in the background
+        function drawStars() {
+            const starGeometry = new THREE.SphereGeometry(0.1, 5, 5);
+            const starMaterial = new THREE.MeshBasicMaterial({ color: 0xFFFFFF });
+
+            starPositions.forEach(position => {
+                const star = new THREE.Mesh(starGeometry, starMaterial);
+                star.position.copy(position);
+                scene.add(star);
+            });
+        }
+
+        // Draw the sun
+        const sunGeometry = new THREE.SphereGeometry(SUN_RADIUS, 100, 100);
+        const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xFFFF00 });
+        const sun = new THREE.Mesh(sunGeometry, sunMaterial);
+        scene.add(sun);
+
+        // Draw orbits and planets
+        const orbits = PLANET_RADIUS.map((_, index) => {
+            const points = [];
+            const segments = 64;
+            for (let i = 0; i <= segments; i++) {
+                const theta = (i / segments) * Math.PI * 2;
+                const x = PLANET_DISTANCE[index] * Math.cos(theta);
+                const y = PLANET_DISTANCE[index] * Math.sin(theta);
+                points.push(new THREE.Vector3(x, y, 0));
+            }
+
+            const orbitGeometry = new THREE.BufferGeometry().setFromPoints(points);
+            const orbitMaterial = new THREE.LineDashedMaterial({ color: 0xFFFFFF, opacity: 0.5, transparent: true, dashSize: 0.5, gapSize: 0.5 });
+            const orbit = new THREE.LineLoop(orbitGeometry, orbitMaterial);
+            scene.add(orbit);
+            return orbit;
+        });
+
+        const planetGeometries = PLANET_RADIUS.map(radius => new THREE.SphereGeometry(radius, 100, 100));
+
+        const planets = PLANET_RADIUS.map((radius, index) => {
+            const planetMaterial = new THREE.MeshBasicMaterial({ color: PLANET_COLORS[index] });
+            const planet = new THREE.Mesh(planetGeometries[index], planetMaterial);
+            scene.add(planet);
+            return planet;
+        });
+
+        // Input range for controlling the period
+        const periodInput = document.createElement('input');
+        periodInput.type = 'range';
+        periodInput.min = '0.01';
+        periodInput.max = '20.0';
+        periodInput.step = '0.1';
+        periodInput.value = '10.0';
+
+        // Touch variables
+        let touchStartDistance = 0;
+
+        // Main animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Update planet positions and orbits
+            const time = Date.now() * 0.001;
+            const periodMultiplier = parseFloat(periodInput.value);
+            planets.forEach((planet, index) => {
+                const distance = PLANET_DISTANCE[index];
+                const period = PLANET_PERIOD[index] * periodMultiplier * 10; // Convert to milliseconds
+                const velocity = 1.0; // Adjust velocity as needed
+
+                const angle = (360.0 * time) / period + velocity;
+                const x = distance * Math.cos(THREE.MathUtils.degToRad(angle));
+                const y = distance * Math.sin(THREE.MathUtils.degToRad(angle));
+                planet.position.set(x, y, 0);
+
+                // Update orbit position relative to the sun
+                orbits[index].position.set(0, 0, 0); // Orbits are centered at (0, 0, 0)
+                orbits[index].rotation.z = THREE.MathUtils.degToRad(angle);
+            });
+
+            renderer.render(scene, camera);
+        }
+
+        // Event listeners
+        let isPointerDown = false;
+        let previousPointerPosition = { x: 0, y: 0 };
+
+        window.addEventListener('pointerdown', (event) => {
+            isPointerDown = true;
+            previousPointerPosition = { x: event.clientX, y: event.clientY };
+        });
+
+        window.addEventListener('pointerup', () => {
+            isPointerDown = false;
+        });
+
+        window.addEventListener('pointermove', (event) => {
+            if (isPointerDown) {
+                const deltaX = event.clientX - previousPointerPosition.x;
+                const deltaY = event.clientY - previousPointerPosition.y;
+
+                const rotationSpeed = 0.005;
+                scene.rotation.y += deltaX * rotationSpeed;
+                scene.rotation.x += deltaY * rotationSpeed;
+
+                previousPointerPosition = { x: event.clientX, y: event.clientY };
+            }
+        });
+
+        window.addEventListener('wheel', (event) => {
+            camera.position.z += event.deltaY * 0.1;
+        });
+
+        window.addEventListener('touchstart', (event) => {
+            if (event.touches.length === 2) {
+                touchStartDistance = Math.hypot(
+                    event.touches[0].clientX - event.touches[1].clientX,
+                    event.touches[0].clientY - event.touches[1].clientY
+                );
+            }
+        });
+
+        window.addEventListener('touchmove', (event) => {
+            if (event.touches.length === 2) {
+                const touchCurrentDistance = Math.hypot(
+                    event.touches[0].clientX - event.touches[1].clientX,
+                    event.touches[0].clientY - event.touches[1].clientY
+                );
+
+                const deltaDistance = touchCurrentDistance - touchStartDistance;
+
+                camera.position.z -= deltaDistance * 0.05;
+                touchStartDistance = touchCurrentDistance;
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Position the input range
+        periodInput.style.position = 'absolute';
+        periodInput.style.bottom = '10px';
+        periodInput.style.left = '50%';
+        periodInput.style.transform = 'translate(-50% , 0)'
+
+        document.body.appendChild(periodInput);
+
+        // Draw stars in the background
+        drawStars();
+
+        animate();
+    </script>
+
+
+    
+    <!-- Start Conter-Event -->
+    
+    <!-- Start Conter-Event -->
+
+
     
     <script>
 
@@ -214,8 +314,11 @@
         let year = new Date()
         
         copyright.innerHTML =` &copy; Copyright ${year.getFullYear()} SYF`
+
         
 
     </script>
+      
+    
 </body>
 </html>
